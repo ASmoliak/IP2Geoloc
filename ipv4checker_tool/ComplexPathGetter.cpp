@@ -1,25 +1,33 @@
-ComplexPathGetter::ComplexPathGetter(std::stringstream json_content) :
-	_complex_path_value(-1)
+GeolocationDetailsParser::GeolocationDetailsParser(std::stringstream json_content)
 {
 	property_tree::read_json(json_content, _root_of_tree);
+	readGeolocationInfo();
 }
 
-ComplexPathGetter::ComplexPathGetter(const std::string& json_file_name) :
-	_complex_path_value(-1)
+GeolocationDetailsParser::GeolocationDetailsParser(const std::string& json_file_name)
 {
 	property_tree::read_json(json_file_name, _root_of_tree);
+	readGeolocationInfo();
 }
 
-int ComplexPathGetter::getComplexPathValue()
+void GeolocationDetailsParser::readGeolocationInfo()
 {
-	if (_complex_path_value == -1)
-	{
-		readComplexPathValue();
-	}
-	return _complex_path_value;
+	_country = _root_of_tree.get<std::string>("country");
+	_regionName = _root_of_tree.get<std::string>("regionName");
+	_city = _root_of_tree.get<std::string>("city");
 }
 
-void ComplexPathGetter::readComplexPathValue()
+std::string GeolocationDetailsParser::getCountry()
 {
-	_complex_path_value = _root_of_tree.get<int>("height");
+	return _country;
+}
+
+std::string GeolocationDetailsParser::getRegionName()
+{
+	return _regionName;
+}
+
+std::string GeolocationDetailsParser::getCity()
+{
+	return _city;
 }

@@ -3,8 +3,8 @@ int main()
 	const std::string IPV4_TO_LOOK_UP = "5.29.232.219";
 	try
 	{
-		ComplexPathGetter cpg("sample.json");
-		std::cout << cpg.getComplexPathValue() << std::endl;
+		GeolocationDetailsParser locationParser("sample.json");
+		std::cout << locationParser.getCountry() << std::endl;
 	}
 	catch (const property_tree::file_parser_error &e)
 	{

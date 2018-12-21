@@ -8,4 +8,5 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 
-#include "ComplexPathGetter.h"
+#include "GeolocationDetailsParser.h"
+#include "GeolocationDataRequestor.h"

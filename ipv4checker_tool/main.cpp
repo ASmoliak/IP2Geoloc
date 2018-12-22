@@ -1,13 +1,37 @@
+std::string getUserInputIP()
+{
+	std::string IPv4;
+
+	do
+	{
+		std::cout << "Enter an IPv4 address to resolve geolocation for: ";
+		std::cin >> IPv4;
+
+		boost::system::error_code ec;
+		asio::ip::address::from_string(IPv4, ec);
+		if (ec)
+		{
+			std::cout << "Input IPv4 is invalid" << std::endl;
+			continue;
+		}
+		else
+		{
+			return IPv4;
+		}
+	} while (1);
+}
+
 int main()
 {
-	const std::string IPV4_TO_LOOK_UP = "8.8.8.8"; // "5.29.232.219";
 	try
 	{
-		//GeolocParser locationParser("sample.json");
-		//std::cout << locationParser.getCountry() << std::endl;
-		GeolocRequestor requestor();
-		
-		//requestor.sendRequest();
+		for (;;)
+		{
+			std::string IPv4 = getUserInputIP();
+			IPtoGeolocConverter converter;
+			Geolocation result = converter.convertIPtoGeoloc(IPv4);
+			result.print();
+		}
 	}
 	catch (const property_tree::file_parser_error &e)
 	{

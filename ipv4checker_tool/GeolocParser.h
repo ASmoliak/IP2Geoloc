@@ -6,7 +6,7 @@ class GeolocParser
 {
 public:
 	// C'tor and D'tor
-	GeolocParser(std::stringstream json_content);
+	GeolocParser(std::stringstream& json_content);
 	GeolocParser(const std::string& json_file_name);
 
 	// Public member functions
@@ -15,10 +15,6 @@ public:
 	std::string getCity();
 
 private:
-	// Private Member functions
-	void readGeolocationInfo();
-
 	// Member variables
 	property_tree::ptree _root_of_tree;
-	std::string _country, _regionName, _city;
 };

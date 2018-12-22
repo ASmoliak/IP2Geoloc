@@ -3,9 +3,8 @@
 namespace beast = boost::beast;
 namespace http = beast::http;
 namespace asio = boost::asio;
-namespace ip = asio::ip;
 typedef http::request<http::string_body> http_request;
-
+typedef http::response<http::dynamic_body> http_response;
 
 class GeolocRequestor
 {
@@ -15,13 +14,13 @@ public:
 	~GeolocRequestor();
 
 	// Public member functions
-	beast::flat_buffer resolveToGeoloc(const std::string &IPv4);
+	std::string requestGeolocFromIP(const std::string &IPv4);
 
 private:
 	// Private member functions
 	http_request generateGeolocRequest(const std::string &IPv4);
-	void sendRequest(http_request &geoloc_request);
-	beast::flat_buffer readResponse();
+	void sendRequest(const http_request &geoloc_request);
+	http_response readResponse();
 
 	// Private member variables
 	asio::io_context _ioc;

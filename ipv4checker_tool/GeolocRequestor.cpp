@@ -1,3 +1,6 @@
+#include "GeolocRequestor.h"
+#include "GeolocParser.h"
+
 GeolocRequestor::GeolocRequestor() :
 	_ioc(), _socket(_ioc), _resolver(_ioc)
 { 
@@ -6,14 +9,17 @@ GeolocRequestor::GeolocRequestor() :
 GeolocRequestor::~GeolocRequestor()
 {
 	boost::system::error_code errorcode;
-	_socket.shutdown(ip::tcp::socket::shutdown_both, errorcode);
+	_socket.shutdown(asio::ip::tcp::socket::shutdown_both, errorcode);
 }
 
-beast::flat_buffer GeolocRequestor::resolveToGeoloc(const std::string &IPv4)
+std::string GeolocRequestor::requestGeolocFromIP(const std::string &IPv4)
 {
 	http_request resolve_request = generateGeolocRequest(IPv4);
 	sendRequest(resolve_request);
-	return readResponse();
+
+	http_response resolve_response = readResponse();
+	std::string response_body = beast::buffers_to_string(resolve_response.body().data());
+	return response_body;
 }
 
 http_request GeolocRequestor::generateGeolocRequest(const std::string &IPv4)
@@ -26,7 +32,7 @@ http_request GeolocRequestor::generateGeolocRequest(const std::string &IPv4)
 	return request;
 }
 
-void GeolocRequestor::sendRequest(http_request &geoloc_request)
+void GeolocRequestor::sendRequest(const http_request &geoloc_request)
 {
 	auto const results = _resolver.resolve(HOST, PORT);
 
@@ -34,12 +40,12 @@ void GeolocRequestor::sendRequest(http_request &geoloc_request)
 	http::write(_socket, geoloc_request);
 }
 
-beast::flat_buffer GeolocRequestor::readResponse()
+http_response GeolocRequestor::readResponse()
 {
 	beast::flat_buffer buffer;
-	http::response<http::dynamic_body> response;
+	http_response response;
 	http::read(_socket, buffer, response);
 
-	return buffer;
+	return response;
 }
 

@@ -1,5 +1,4 @@
 #pragma once
-//#define _WIN32_WINNT=0x0501
 
 #include <iostream>
 #include <string>
@@ -14,7 +13,9 @@
 #include <boost/beast/version.hpp>
 #include <boost/asio/connect.hpp>
 #include <boost/asio/ip/tcp.hpp>
+#include <boost/program_options.hpp>
 
 #include "GeolocParser.h"
 #include "GeolocRequestor.h"
 #include "IPtoGeolocConverter.h"
+#include "ProgramArgumentsParser.h"

@@ -28,6 +28,11 @@ namespace PATH_Modifier_Custom_Action
         bool DoesProgramExistInPath()
         {
             bool returnValue = false;
+
+            // TODO finish the actual meat of the custom action: adding and removing paths to the PATH env variable
+            var envVariables = Environment.GetEnvironmentVariables();
+            var value = envVariables["PATH"].ToString();
+
             return returnValue;
         }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace PATH_Modifier_Custom_Action
 {
@@ -10,9 +11,9 @@ namespace PATH_Modifier_Custom_Action
 
     class ArgumentReader
     {
-        const string INSTALL_PATH_ARGUMENT = "--install_path";
-        const string UNINSTALL_PATH_ARGUMENT = "--uninstall_path";
-        const int REQUIRED_ARGUMENT_COUNT = 3;
+        const string INSTALL_PATH_ARGUMENT = "--install-path";
+        const string UNINSTALL_PATH_ARGUMENT = "--uninstall-path";
+        const int REQUIRED_ARGUMENT_COUNT = 2;
 
         public ArgumentReader(string[] arguments)
         {
@@ -52,12 +53,14 @@ namespace PATH_Modifier_Custom_Action
 
         void SetActionFromArgs()
         {
-            _action = _arguments[1];
+            const int FIRST_ARGUMENT = 0;
+            _action = _arguments[FIRST_ARGUMENT];
         }
 
         void SetPathFromArgs()
         {
-            _path = _arguments[2];
+            const int SECOND_ARGUMENT = 1;
+            _path = _arguments[SECOND_ARGUMENT];
         }
 
         bool IsActionValid()
@@ -67,7 +70,8 @@ namespace PATH_Modifier_Custom_Action
 
         bool IsPathValid()
         {
-            return Uri.IsWellFormedUriString(_path, UriKind.Absolute);
+            FileInfo fileInfo = new FileInfo(_path);
+            return fileInfo.Exists;
         }
 
         bool IsArgCountCorrect()

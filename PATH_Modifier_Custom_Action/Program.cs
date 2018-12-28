@@ -42,7 +42,7 @@ namespace PATH_Modifier_Custom_Action
         static int GetCustomActionReturnValue()
         {
             Console.WriteLine("<QUERY> Continue installation without adding the program path to the PATH env variable? (Y/N)");
-            string answerToQuestionChar = Console.ReadKey().Key.ToString();
+            string answerToQuestionChar = Console.ReadKey().Key.ToString().ToUpper();
             if (answerToQuestionChar == "Y")
             {
                 return SUCCESS_RETURN_VALUE;

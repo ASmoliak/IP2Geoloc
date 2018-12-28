@@ -37,6 +37,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -267,20 +275,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A5CBC797179843F1B305B132EE9B3C95"
-            {
-            "Name" = "8:IP2Geoloc"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_51CA44A09ADE4987A0B0275BE87E023F"
-            "Folder" = "8:_D65527BB6B924A2B8C10CE38D50872D6"
-            "WorkingFolder" = "8:_9085B42B43A9488184C1337490A3B085"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
         }
         "UserInterface"
         {
@@ -682,7 +676,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_51CA44A09ADE4987A0B0275BE87E023F"
             {
-            "SourcePath" = "8:..\\Release\\ipv4checker_tool.exe"
+            "SourcePath" = "8:..\\Debug\\ipv4checker_tool.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"

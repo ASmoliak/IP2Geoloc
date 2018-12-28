@@ -4,38 +4,43 @@ namespace PATH_Modifier_Custom_Action
 {
     class Program
     {
-        #region Constants
         const int ERROR_RETURN_VALUe = 1;
         const int SUCCESS_RETURN_VALUE = 0;
-        const int THREE_ARGUMENTS = 3;
-        const string INSTALL_PATH_ARGUMENT = "--install_path";
-        const string UNINSTALL_PATH_ARGUMENT = "--uninstall_path";
-
-        #endregion
 
         static int Main(string[] args)
         {
-            if (args.Length != THREE_ARGUMENTS)
+            int programReturnValue = SUCCESS_RETURN_VALUE;
+            try
             {
-                Console.WriteLine("<ERROR> There are not enough arguments to execute this program.");
-                return DoesUserContinueInstall();
-            }
+                ArgumentReader customActionArgReader = new ArgumentReader(args);
+                PathVariableAction actionToExecute = customActionArgReader.GetActionValue();
+                string path = customActionArgReader.GetProgramPath();
 
-             
-            string path = ExtractPathFromArgs(args);
-            if (!ValidatePath(path))
+                PathManager customActionPathManager = new PathManager(path);
+                if(actionToExecute == PathVariableAction.InstallPathVariable)
+                {
+                    customActionPathManager.AddProgramToPath();
+                }
+                else 
+                {
+                    customActionPathManager.RemoveProgramFromPath();
+                }
+                
+            }
+            catch (Exception e)
             {
-                Console.WriteLine("<ERROR> The input program path for the PATH env variable is incorrect!");
-                return DoesUserContinueInstall();
+                Console.WriteLine(e.Message);
             }
-
-
-            return SUCCESS_RETURN_VALUE;
+            finally
+            {
+                Console.WriteLine("<CRITICAL> Custom action failed, failed to add to PATH.");
+                programReturnValue = GetCustomActionReturnValue();
+            }
+            return programReturnValue;
         }
 
-        static int DoesUserContinueInstall()
+        static int GetCustomActionReturnValue()
         {
-            Console.WriteLine("<CRITICAL> Failed to add to PATH.");
             Console.WriteLine("<QUERY> Continue installation without adding the program path to the PATH env variable? (Y/N)");
             string answerToQuestionChar = Console.ReadKey().Key.ToString();
             if (answerToQuestionChar == "Y")
@@ -47,23 +52,5 @@ namespace PATH_Modifier_Custom_Action
                 return ERROR_RETURN_VALUe;
             }
         }
-
-        static bool ValidatePath(string path)
-        {
-            return Uri.IsWellFormedUriString(path, UriKind.Absolute);
-        }
-
-        static string ExtractActionFromArgs(string[] args)
-        {
-            string secondArgument = args[1];
-            return secondArgument;
-        }
-
-        static string ExtractPathFromArgs(string[] args)
-        {
-            string thirdArgument = args[2];
-            return thirdArgument;
-        }
-
     }
 }

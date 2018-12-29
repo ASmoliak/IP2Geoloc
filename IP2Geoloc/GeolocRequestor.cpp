@@ -1,9 +1,13 @@
+#include "pch.h"
+
+#include <string>
+
 #include "GeolocRequestor.h"
 #include "GeolocParser.h"
 
 GeolocRequestor::GeolocRequestor() :
 	_ioc(), _socket(_ioc), _resolver(_ioc)
-{ 
+{
 }
 
 GeolocRequestor::~GeolocRequestor()
@@ -13,7 +17,7 @@ GeolocRequestor::~GeolocRequestor()
 }
 
 std::string GeolocRequestor::requestGeolocFromIP(const std::string &IPv4)
-{
+{ 
 	http_request resolve_request = generateGeolocRequest(IPv4);
 	sendRequest(resolve_request);
 
@@ -25,7 +29,7 @@ std::string GeolocRequestor::requestGeolocFromIP(const std::string &IPv4)
 http_request GeolocRequestor::generateGeolocRequest(const std::string &IPv4)
 {
 	std::string target_url = "/json/" + IPv4;
-	http_request request{ http::verb::get, target_url, VERSION };
+	http_request request{ http::verb::get, target_url, HTTP_VERSION };
 	request.set(http::field::host, HOST);
 	request.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
 
@@ -48,4 +52,3 @@ http_response GeolocRequestor::readResponse()
 
 	return response;
 }
-

@@ -1,4 +1,8 @@
 #pragma once
+#include "pch.h"
+
+#include <sstream>
+#include <string>
 
 namespace property_tree = boost::property_tree;
 

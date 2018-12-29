@@ -1,11 +1,12 @@
 #pragma once
+#include "pch.h"
+
+namespace program_options = boost::program_options;
 
 struct Settings
 {
 	std::string IPv4_to_scan;
 };
-
-namespace program_options = boost::program_options;
 
 class ProgramArgumentsParser
 {

@@ -1,5 +1,10 @@
 #include "pch.h"
 
+#include <iostream>
+#include <string>
+
+#include "ProgramArgumentsParser.h"
+
 ProgramArgumentsParser::ProgramArgumentsParser(int argumentCount, char *arguments[])
 {
 	generateOptions();

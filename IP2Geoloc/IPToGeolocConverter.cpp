@@ -1,3 +1,11 @@
+#include "pch.h"
+
+#include <string>
+#include <sstream>
+
+#include "IPtoGeolocConverter.h"
+#include "GeolocParser.h"
+
 IPtoGeolocConverter::IPtoGeolocConverter()
 {
 }

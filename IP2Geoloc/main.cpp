@@ -1,4 +1,13 @@
+#include "pch.h"
+
+#include <iostream>
+
+#include "ProgramArgumentsParser.h"
+#include "IPtoGeolocConverter.h"
+
 Settings globalSettings;
+
+namespace property_tree = boost::property_tree;
 
 void runGeolocationResolver()
 {

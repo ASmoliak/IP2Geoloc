@@ -1,24 +1,33 @@
 #include "pch.h"
 
-ProgramArgumentsParser::ProgramArgumentsParser(int argumentCount, char *arguments[])
+#include <iostream>
+#include <string>
+
+#include "ProgramArgumentsParser.h"
+
+ProgramArgumentsParser::ProgramArgumentsParser(int argument_count, char *arguments[])
 {
 	generateOptions();
-	storeArguments(argumentCount, arguments);
+	storeArguments(argument_count, arguments);
 }
 
-ProgramArgumentsParser::~ProgramArgumentsParser()
+void ProgramArgumentsParser::generateOptions()
 {
+	_program_options.add_options()
+		("help", "Produce help message")
+		("ip", program_options::value<std::string>(), "Set the IP to get geolocation information for.")
+		;
 }
 
-void ProgramArgumentsParser::storeArguments(int argumentCount, char* arguments[])
+void ProgramArgumentsParser::storeArguments(int argument_count, char *arguments[])
 {
-	program_options::store(program_options::parse_command_line(argumentCount, arguments, _programOptions), _variables);
+	program_options::store(program_options::parse_command_line(argument_count, arguments, _program_options), _variables);
 	program_options::notify(_variables);
 }
 
 Settings ProgramArgumentsParser::getParsedSettings()
 {
-	Settings generatedSettings;
+	Settings generated_settings;
 
 	if (_variables.count("help"))
 	{
@@ -27,21 +36,14 @@ Settings ProgramArgumentsParser::getParsedSettings()
 	}
 	if (_variables.count("ip"))
 	{
-		generatedSettings.IPv4_to_scan = _variables["ip"].as<std::string>();
+		generated_settings.IPv4_to_scan = _variables["ip"].as<std::string>();
 	}
 
-	return generatedSettings;
+	return generated_settings;
 }
 
-void ProgramArgumentsParser::generateOptions()
-{
-	_programOptions.add_options()
-		("help", "Produce help message")
-		("ip", program_options::value<std::string>(), "Set the IP to get geolocation information for.")
-		;
-}
 
 void ProgramArgumentsParser::printHelp()
 {
-	std::cout << _programOptions << std::endl;
+	std::cout << _program_options << std::endl;
 }

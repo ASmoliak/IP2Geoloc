@@ -1,4 +1,7 @@
 #pragma once
+#include "pch.h"
+
+#include <string>
 
 namespace beast = boost::beast;
 namespace http = beast::http;
@@ -22,13 +25,13 @@ private:
 	void sendRequest(const http_request &geoloc_request);
 	http_response readResponse();
 
+	// Constants
+	static constexpr const char *HOST = "www.ip-api.com";
+	static constexpr const char *PORT = "80";
+	static constexpr int HTTP_VERSION = 11;
+
 	// Private member variables
 	asio::io_context _ioc;
 	asio::ip::tcp::resolver _resolver;
 	asio::ip::tcp::socket _socket;
-
-	// Constants
-	static constexpr const char *HOST = "www.ip-api.com";
-	static constexpr const char *PORT = "80";
-	static constexpr int VERSION = 11;
 };

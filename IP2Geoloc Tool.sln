@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ipv4checker_tool", "ipv4checker_tool\ipv4checker_tool.vcxproj", "{35316D49-2EA9-43AC-9DEF-343EDD9BD175}"
-EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer Project", "Installer Project\Installer Project.vdproj", "{B60CB9C8-E027-406E-9E67-FA9F39B69B09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathManagerCustomAction", "PathManagerCustomAction\PathManagerCustomAction.csproj", "{07E77F4A-A37F-4DE3-A484-24C06DCEB9C6}"
@@ -13,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		SolutionTodos.txt = SolutionTodos.txt
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IP2Geoloc", "IP2Geoloc\IP2Geoloc.vcxproj", "{35316D49-2EA9-43AC-9DEF-343EDD9BD175}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,16 +24,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|x64.ActiveCfg = Debug|x64
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|x64.Build.0 = Debug|x64
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|x86.ActiveCfg = Debug|Win32
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|x86.Build.0 = Debug|Win32
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|Any CPU.ActiveCfg = Release|Win32
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|x64.ActiveCfg = Release|x64
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|x64.Build.0 = Release|x64
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|x86.ActiveCfg = Release|Win32
-		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|x86.Build.0 = Release|Win32
 		{B60CB9C8-E027-406E-9E67-FA9F39B69B09}.Debug|Any CPU.ActiveCfg = Debug
 		{B60CB9C8-E027-406E-9E67-FA9F39B69B09}.Debug|Any CPU.Build.0 = Debug
 		{B60CB9C8-E027-406E-9E67-FA9F39B69B09}.Debug|x64.ActiveCfg = Debug
@@ -54,6 +44,16 @@ Global
 		{07E77F4A-A37F-4DE3-A484-24C06DCEB9C6}.Release|x64.Build.0 = Release|Any CPU
 		{07E77F4A-A37F-4DE3-A484-24C06DCEB9C6}.Release|x86.ActiveCfg = Release|Any CPU
 		{07E77F4A-A37F-4DE3-A484-24C06DCEB9C6}.Release|x86.Build.0 = Release|Any CPU
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|x64.ActiveCfg = Debug|x64
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|x64.Build.0 = Debug|x64
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|x86.ActiveCfg = Debug|Win32
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Debug|x86.Build.0 = Debug|Win32
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|Any CPU.ActiveCfg = Release|Win32
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|x64.ActiveCfg = Release|x64
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|x64.Build.0 = Release|x64
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|x86.ActiveCfg = Release|Win32
+		{35316D49-2EA9-43AC-9DEF-343EDD9BD175}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

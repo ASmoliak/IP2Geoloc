@@ -33,3 +33,4 @@ BoostArgumentHandler/Debug/
 BoostArgumentHandler/x64/Debug/vc141.idb
 Debug/
 .vs/
+Installer Project/Release/ip2geoloc_installer.msi

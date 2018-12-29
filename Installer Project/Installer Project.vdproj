@@ -21,13 +21,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_51CA44A09ADE4987A0B0275BE87E023F"
+        "MsmKey" = "8:_7D6E15C8547A2BE73353E2C50532F00F"
+        "OwnerKey" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B8468C5121A7484CA593AEFD509FA19F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7D6E15C8547A2BE73353E2C50532F00F"
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -35,12 +41,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7D6E15C8547A2BE73353E2C50532F00F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -83,11 +83,11 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\Installer Project.msi"
+        "OutputFilename" = "8:Release\\ip2geoloc_installer.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
-        "Compression" = "3:2"
+        "Compression" = "3:3"
         "SignOutput" = "11:FALSE"
         "CertificateFile" = "8:"
         "PrivateKeyFile" = "8:"
@@ -102,6 +102,11 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Visual.C++.14.0.x86"
                     {
                     "Name" = "8:Visual C++ \"14\" Runtime Libraries (x86)"
@@ -267,15 +272,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP2Geoloc"
-        "ProductCode" = "8:{9DFC3E6B-560E-4C34-BF42-31BFE1534803}"
-        "PackageCode" = "8:{58A6FAB7-2A63-4268-856A-7FDF2B5876CE}"
+        "ProductCode" = "8:{9DE374FA-2BBA-4BB2-921A-BB2847A36191}"
+        "PackageCode" = "8:{D8FFD254-AB2A-4ABE-842C-0ED210C4003C}"
         "UpgradeCode" = "8:{4D6D8381-E2D0-49F4-9350-9B4C33891F87}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.2.1"
+        "ProductVersion" = "8:0.1"
         "Manufacturer" = "8:Rogue Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -789,7 +794,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
             {
-            "SourcePath" = "8:..\\PathManagerCustomAction\\obj\\Debug\\PathModifierCustomAction.exe"
+            "SourcePath" = "8:..\\PathManagerCustomAction\\obj\\Release\\PathManagerCustomAction.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"
@@ -815,9 +820,9 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_51CA44A09ADE4987A0B0275BE87E023F"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B8468C5121A7484CA593AEFD509FA19F"
             {
-            "SourcePath" = "8:..\\Debug\\ipv4checker_tool.exe"
+            "SourcePath" = "8:..\\Release\\IP2Geoloc.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"

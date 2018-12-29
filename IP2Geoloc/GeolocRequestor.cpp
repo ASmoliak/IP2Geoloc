@@ -12,12 +12,12 @@ GeolocRequestor::GeolocRequestor() :
 
 GeolocRequestor::~GeolocRequestor()
 {
-	boost::system::error_code errorcode;
-	_socket.shutdown(asio::ip::tcp::socket::shutdown_both, errorcode);
+	boost::system::error_code error_code;
+	_socket.shutdown(asio::ip::tcp::socket::shutdown_both, error_code);
 }
 
 std::string GeolocRequestor::requestGeolocFromIP(const std::string &IPv4)
-{ 
+{
 	http_request resolve_request = generateGeolocRequest(IPv4);
 	sendRequest(resolve_request);
 

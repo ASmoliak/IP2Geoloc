@@ -10,12 +10,12 @@ struct Geolocation
 {
 	// Member variables
 	std::string _country;
-	std::string _regionName;
+	std::string _region_name;
 	std::string _city;
-	
+
 	// C'tor
-	Geolocation(const std::string &country, const std::string &regionName, const std::string &city) :
-		_country(country), _regionName(regionName), _city(city)
+	Geolocation(const std::string &country, const std::string &region_name, const std::string &city) :
+		_country(country), _region_name(region_name), _city(city)
 	{
 	}
 
@@ -23,7 +23,7 @@ struct Geolocation
 	void printFields()
 	{
 		std::cout << "Country: " << _country << std::endl;
-		std::cout << "Region: " << _regionName << std::endl;
+		std::cout << "Region: " << _region_name << std::endl;
 		std::cout << "City: " << _city << std::endl;
 	}
 };

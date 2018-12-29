@@ -12,18 +12,18 @@ class ProgramArgumentsParser
 {
 public:
 	// Constructor and destructor
-	ProgramArgumentsParser(int argumentCount, char *arguments[]);
+	ProgramArgumentsParser(int argument_count, char *arguments[]);
 
 	// Public member functions
 	Settings getParsedSettings();
 
 private:
 	// Private member functions
-	void storeArguments(int argumentCount, char *arguments[]);
+	void storeArguments(int argument_count, char *arguments[]);
 	void generateOptions();
 	void printHelp();
 
 	// Private member variables
-	program_options::options_description _programOptions = program_options::options_description("Allowed options");
+	program_options::options_description _program_options = program_options::options_description("Allowed options");
 	program_options::variables_map _variables;
 };

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PATH_Modifier_Custom_Action
+namespace PathManagerCustomAction
 {
     class PATH_Manager
     {

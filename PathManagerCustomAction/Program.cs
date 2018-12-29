@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PATH_Modifier_Custom_Action
+namespace PathManagerCustomAction
 {
     class Program
     {
@@ -9,6 +9,7 @@ namespace PATH_Modifier_Custom_Action
 
         static int Main(string[] args)
         {
+            Console.WriteLine(args);
             int programReturnValue = SUCCESS_RETURN_VALUE;
             try
             {

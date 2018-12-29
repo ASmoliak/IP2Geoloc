@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace PATH_Modifier_Custom_Action
+namespace PathManagerCustomAction
 {
     enum PathVariableAction
     {

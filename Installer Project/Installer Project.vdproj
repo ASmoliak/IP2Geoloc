@@ -15,8 +15,32 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_51CA44A09ADE4987A0B0275BE87E023F"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7D6E15C8547A2BE73353E2C50532F00F"
+        "OwnerKey" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7D6E15C8547A2BE73353E2C50532F00F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -91,6 +115,48 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_09110416AA5B47209F8F74B88577E04F"
+            {
+            "Name" = "8:Primary output from PathManagerCustomAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:--install-path [ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_D6E5F70F_F02A_417C_A45E_B696E0E20931"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_76A597FC8EA846D9981D1907F0FDEB33"
+            {
+            "Name" = "8:Primary output from PathManagerCustomAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:--uninstall-path [ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_5DF5013A_5248_4A95_B9BD_D8CB68EDC75E"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_DE5CC46D28054CA08833B89B676EA8DE"
+            {
+            "Name" = "8:Primary output from PathManagerCustomAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
+            "FileType" = "3:2"
+            "InstallAction" = "3:3"
+            "Arguments" = "8:--uninstall-path [ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_0E3B4B53_2B11_4D0A_BE26_9BA3F73E509F"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -114,6 +180,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7D6E15C8547A2BE73353E2C50532F00F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_7D6E15C8547A2BE73353E2C50532F00F"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_9085B42B43A9488184C1337490A3B085"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -171,7 +268,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP2Geoloc"
         "ProductCode" = "8:{9DFC3E6B-560E-4C34-BF42-31BFE1534803}"
-        "PackageCode" = "8:{7B5557D7-F5CF-49AB-B568-FB356B36C50C}"
+        "PackageCode" = "8:{DCCCFAD6-A4F8-4397-B8AB-80C3CF474F87}"
         "UpgradeCode" = "8:{4D6D8381-E2D0-49F4-9350-9B4C33891F87}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -690,6 +787,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
+            {
+            "SourcePath" = "8:..\\PathManagerCustomAction\\obj\\Debug\\PATH_Modifier_Custom_Action.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_9085B42B43A9488184C1337490A3B085"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{07E77F4A-A37F-4DE3-A484-24C06DCEB9C6}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_51CA44A09ADE4987A0B0275BE87E023F"
             {
             "SourcePath" = "8:..\\Debug\\ipv4checker_tool.exe"

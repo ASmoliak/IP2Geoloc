@@ -36,3 +36,5 @@ Debug/
 Installer Project/Release/ip2geoloc_installer.msi
 PathManagerCustomAction/bin/
 PathManagerCustomAction/obj/
+IP2Geoloc/Release/
+Release/

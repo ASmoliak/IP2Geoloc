@@ -34,11 +34,11 @@ void runGeolocationResolver()
 	}
 	catch (const property_tree::file_parser_error &e)
 	{
-		std::cout << "<CRITICAL>" << e.what() << std::endl;
+		std::cout << "<CRITICAL> " << e.what() << std::endl;
 	}
 	catch (const property_tree::ptree_bad_path &e)
 	{
-		std::cout << "<CRITICAL>" << e.what() << std::endl;
+		std::cout << "<CRITICAL> " << e.what() << std::endl;
 	}
 	catch (const property_tree::ptree_error &e)
 	{

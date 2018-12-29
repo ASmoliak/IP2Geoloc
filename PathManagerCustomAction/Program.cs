@@ -9,7 +9,6 @@ namespace PathManagerCustomAction
 
         static int Main(string[] args)
         {
-            Console.WriteLine(args);
             int programReturnValue = SUCCESS_RETURN_VALUE;
             try
             {
@@ -18,15 +17,14 @@ namespace PathManagerCustomAction
                 string path = customActionArgReader.GetProgramPath();
 
                 PATH_Manager customActionPathManager = new PATH_Manager(path);
-                if(actionToExecute == PathVariableAction.InstallPathVariable)
+                if (actionToExecute == PathVariableAction.InstallPathVariable)
                 {
                     customActionPathManager.AddToPATH();
                 }
-                else 
+                else
                 {
                     customActionPathManager.RemoveFromPATH();
                 }
-                
             }
             catch (Exception e)
             {

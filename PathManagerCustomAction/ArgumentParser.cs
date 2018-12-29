@@ -18,7 +18,7 @@ namespace PathManagerCustomAction
         public ArgumentParser(string[] arguments)
         {
             _arguments = arguments;
-            if(!IsArgCountCorrect())
+            if (!IsArgCountCorrect())
             {
                 throw new ArgumentException("The argument count is incorrect.");
             }
@@ -26,26 +26,16 @@ namespace PathManagerCustomAction
             SetArgumentsAndCheckValidity();
         }
 
-        public PathVariableAction GetActionValue()
-        {
-            return ConvertToPathAction();
-        }
-
-        public string GetProgramPath()
-        {
-            return _path;
-        }
-        
         void SetArgumentsAndCheckValidity()
         {
             SetActionFromArgs();
-            if(!IsActionValid())
+            if (!IsActionValid())
             {
                 throw new ArgumentException("The action argument is invalid.");
             }
 
             SetPathFromArgs();
-            if(!IsPathValid())
+            if (!IsPathValid())
             {
                 throw new ArgumentException("The path argument is invalid.");
             }
@@ -63,6 +53,23 @@ namespace PathManagerCustomAction
             _path = _arguments[SECOND_ARGUMENT];
         }
 
+        public PathVariableAction GetActionValue()
+        {
+            return ConvertToPathAction();
+        }
+
+        PathVariableAction ConvertToPathAction()
+        {
+            if (_action == INSTALL_PATH_ARGUMENT)
+            {
+                return PathVariableAction.InstallPathVariable;
+            }
+            else
+            {
+                return PathVariableAction.UninstallPathVariable;
+            }
+        }
+
         bool IsActionValid()
         {
             return _action == INSTALL_PATH_ARGUMENT || _action == UNINSTALL_PATH_ARGUMENT;
@@ -78,16 +85,9 @@ namespace PathManagerCustomAction
             return _arguments.Length == REQUIRED_ARGUMENT_COUNT;
         }
 
-        PathVariableAction ConvertToPathAction()
+        public string GetProgramPath()
         {
-            if(_action == INSTALL_PATH_ARGUMENT)
-            {
-                return PathVariableAction.InstallPathVariable;
-            }
-            else
-            {
-                return PathVariableAction.UninstallPathVariable;
-            }
+            return _path;
         }
 
         string[] _arguments;

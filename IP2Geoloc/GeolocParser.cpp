@@ -5,12 +5,12 @@
 
 #include "GeolocParser.h"
 
-GeolocParser::GeolocParser(std::stringstream& json_content)
+GeolocParser::GeolocParser(std::stringstream &json_content)
 {
 	property_tree::read_json(json_content, _root_of_tree);
 }
 
-GeolocParser::GeolocParser(const std::string& json_file_name)
+GeolocParser::GeolocParser(const std::string &json_file_name)
 {
 	property_tree::read_json(json_file_name, _root_of_tree);
 }

@@ -14,13 +14,13 @@ struct Geolocation
 	std::string _city;
 	
 	// C'tor
-	Geolocation(const std::string& country, const std::string& regionName, const std::string& city) :
+	Geolocation(const std::string &country, const std::string &regionName, const std::string &city) :
 		_country(country), _regionName(regionName), _city(city)
 	{
 	}
 
 	// Public member functions
-	void print()
+	void printFields()
 	{
 		std::cout << "Country: " << _country << std::endl;
 		std::cout << "Region: " << _regionName << std::endl;
@@ -31,14 +31,6 @@ struct Geolocation
 class IPtoGeolocConverter
 {
 public:
-	// c'tors and d'tors
-	IPtoGeolocConverter();
-	~IPtoGeolocConverter();
-
 	// Public member functions
-	Geolocation convertIPtoGeoloc(const std::string& IPv4);
-private:
-
-	// Member variables
-	GeolocRequestor _requestor;
+	static Geolocation convertIPtoGeoloc(const std::string &IPv4);
 };

@@ -11,11 +11,7 @@ ProgramArgumentsParser::ProgramArgumentsParser(int argumentCount, char *argument
 	storeArguments(argumentCount, arguments);
 }
 
-ProgramArgumentsParser::~ProgramArgumentsParser()
-{
-}
-
-void ProgramArgumentsParser::storeArguments(int argumentCount, char* arguments[])
+void ProgramArgumentsParser::storeArguments(int argumentCount, char *arguments[])
 {
 	program_options::store(program_options::parse_command_line(argumentCount, arguments, _programOptions), _variables);
 	program_options::notify(_variables);

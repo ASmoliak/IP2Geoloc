@@ -10,8 +10,8 @@ class GeolocParser
 {
 public:
 	// C'tor and D'tor
-	GeolocParser(std::stringstream& json_content);
-	GeolocParser(const std::string& json_file_name);
+	GeolocParser(std::stringstream &json_content);
+	GeolocParser(const std::string &json_file_name);
 
 	// Public member functions
 	std::string getCountry();

@@ -13,14 +13,13 @@ class ProgramArgumentsParser
 public:
 	// Constructor and destructor
 	ProgramArgumentsParser(int argumentCount, char *arguments[]);
-	~ProgramArgumentsParser();
 
 	// Public member functions
 	Settings getParsedSettings();
 
 private:
 	// Private member functions
-	void storeArguments(int argumentCount, char* arguments[]);
+	void storeArguments(int argumentCount, char *arguments[]);
 	void generateOptions();
 	void printHelp();
 

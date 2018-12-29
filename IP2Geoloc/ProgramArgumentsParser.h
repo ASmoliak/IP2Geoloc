@@ -19,8 +19,8 @@ public:
 
 private:
 	// Private member functions
-	void storeArguments(int argument_count, char *arguments[]);
 	void generateOptions();
+	void storeArguments(int argument_count, char *arguments[]);
 	void printHelp();
 
 	// Private member variables

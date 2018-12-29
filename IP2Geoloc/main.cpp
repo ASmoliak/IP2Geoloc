@@ -9,6 +9,21 @@ Settings _global_settings;
 
 namespace property_tree = boost::property_tree;
 
+int main(int argc, char *argv[])
+{
+	try
+	{
+		ProgramArgumentsParser argument_parser(argc, argv);
+		_global_settings = argument_parser.getParsedSettings();
+		runGeolocationResolver();
+	}
+	catch (const boost::program_options::error &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	return 0;
+}
+
 void runGeolocationResolver()
 {
 	try
@@ -33,19 +48,4 @@ void runGeolocationResolver()
 	{
 		std::cout << "<CRITICAL> Unknown exception." << std::endl;
 	}
-}
-
-int main(int argc, char *argv[])
-{
-	try
-	{
-		ProgramArgumentsParser argument_parser(argc, argv);
-		_global_settings = argument_parser.getParsedSettings();
-		runGeolocationResolver();
-	}
-	catch (const boost::program_options::error &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	return 0;
 }

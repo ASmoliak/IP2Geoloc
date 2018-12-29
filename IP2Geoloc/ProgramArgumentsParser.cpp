@@ -11,6 +11,14 @@ ProgramArgumentsParser::ProgramArgumentsParser(int argument_count, char *argumen
 	storeArguments(argument_count, arguments);
 }
 
+void ProgramArgumentsParser::generateOptions()
+{
+	_program_options.add_options()
+		("help", "Produce help message")
+		("ip", program_options::value<std::string>(), "Set the IP to get geolocation information for.")
+		;
+}
+
 void ProgramArgumentsParser::storeArguments(int argument_count, char *arguments[])
 {
 	program_options::store(program_options::parse_command_line(argument_count, arguments, _program_options), _variables);
@@ -34,13 +42,6 @@ Settings ProgramArgumentsParser::getParsedSettings()
 	return generated_settings;
 }
 
-void ProgramArgumentsParser::generateOptions()
-{
-	_program_options.add_options()
-		("help", "Produce help message")
-		("ip", program_options::value<std::string>(), "Set the IP to get geolocation information for.")
-		;
-}
 
 void ProgramArgumentsParser::printHelp()
 {

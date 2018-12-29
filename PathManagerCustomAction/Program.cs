@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace PathManagerCustomAction
 {
@@ -28,26 +29,13 @@ namespace PathManagerCustomAction
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-                Console.WriteLine("<CRITICAL> Custom action failed, failed to add to PATH.");
-                programReturnValue = GetCustomActionReturnValue();
+                string errorMessage = e.Message + "\n" + "Continue installer?";
+                DialogResult userAnswer = MessageBox.Show(errorMessage, "Exception occured", MessageBoxButtons.YesNo, 
+                    MessageBoxIcon.Error);
+                programReturnValue = (userAnswer == DialogResult.Yes) ? SUCCESS_RETURN_VALUE : ERROR_RETURN_VALUe;
             }
 
             return programReturnValue;
-        }
-
-        static int GetCustomActionReturnValue()
-        {
-            Console.WriteLine("<QUERY> Continue installation without adding the program path to the PATH env variable? (Y/N)");
-            string answerToQuestionChar = Console.ReadKey().Key.ToString().ToUpper();
-            if (answerToQuestionChar == "Y")
-            {
-                return SUCCESS_RETURN_VALUE;
-            }
-            else
-            {
-                return ERROR_RETURN_VALUe;
-            }
         }
     }
 }

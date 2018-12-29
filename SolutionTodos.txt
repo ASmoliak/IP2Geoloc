@@ -1,0 +1,5 @@
+TODOs:
+=========
+
+1. Add the visual C++ runtime library to the installer.
+2. Check if windows comes with the 3.6.1 .NET framework, and whether or not we need to add it to the installer

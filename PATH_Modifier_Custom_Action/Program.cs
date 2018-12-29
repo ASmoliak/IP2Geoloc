@@ -12,30 +12,28 @@ namespace PATH_Modifier_Custom_Action
             int programReturnValue = SUCCESS_RETURN_VALUE;
             try
             {
-                ArgumentReader customActionArgReader = new ArgumentReader(args);
+                ArgumentParser customActionArgReader = new ArgumentParser(args);
                 PathVariableAction actionToExecute = customActionArgReader.GetActionValue();
                 string path = customActionArgReader.GetProgramPath();
 
-                PathManager customActionPathManager = new PathManager(path);
+                PATH_Manager customActionPathManager = new PATH_Manager(path);
                 if(actionToExecute == PathVariableAction.InstallPathVariable)
                 {
-                    customActionPathManager.AddProgramToPath();
+                    customActionPathManager.AddToPATH();
                 }
                 else 
                 {
-                    customActionPathManager.RemoveProgramFromPath();
+                    customActionPathManager.RemoveFromPATH();
                 }
                 
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-            }
-            finally
-            {
                 Console.WriteLine("<CRITICAL> Custom action failed, failed to add to PATH.");
                 programReturnValue = GetCustomActionReturnValue();
             }
+
             return programReturnValue;
         }
 

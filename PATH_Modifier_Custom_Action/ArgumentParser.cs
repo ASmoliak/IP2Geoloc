@@ -9,13 +9,13 @@ namespace PATH_Modifier_Custom_Action
         UninstallPathVariable
     }
 
-    class ArgumentReader
+    class ArgumentParser
     {
         const string INSTALL_PATH_ARGUMENT = "--install-path";
         const string UNINSTALL_PATH_ARGUMENT = "--uninstall-path";
         const int REQUIRED_ARGUMENT_COUNT = 2;
 
-        public ArgumentReader(string[] arguments)
+        public ArgumentParser(string[] arguments)
         {
             _arguments = arguments;
             if(!IsArgCountCorrect())
@@ -70,8 +70,7 @@ namespace PATH_Modifier_Custom_Action
 
         bool IsPathValid()
         {
-            FileInfo fileInfo = new FileInfo(_path);
-            return fileInfo.Exists;
+            return Directory.Exists(_path);
         }
 
         bool IsArgCountCorrect()

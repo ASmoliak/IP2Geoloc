@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ipv4checker_tool", "ipv4che
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer Project", "Installer Project\Installer Project.vdproj", "{B60CB9C8-E027-406E-9E67-FA9F39B69B09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PATH_Modifier_Custom_Action", "PATH_Modifier_Custom_Action\PATH_Modifier_Custom_Action.csproj", "{07E77F4A-A37F-4DE3-A484-24C06DCEB9C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathManagerCustomAction", "PATH_Modifier_Custom_Action\PathManagerCustomAction.csproj", "{07E77F4A-A37F-4DE3-A484-24C06DCEB9C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

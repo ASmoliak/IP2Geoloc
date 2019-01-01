@@ -127,6 +127,38 @@
                 }
             }
         }
+        "Unit Testing"
+        {
+        "DisplayName" = "8:Unit Testing"
+        "IsDebugOnly" = "11:FALSE"
+        "IsReleaseOnly" = "11:FALSE"
+        "OutputFilename" = "8:Unit Testing\\Installer Project.msi"
+        "PackageFilesAs" = "3:2"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "Compression" = "3:2"
+        "SignOutput" = "11:FALSE"
+        "CertificateFile" = "8:"
+        "PrivateKeyFile" = "8:"
+        "TimeStampServer" = "8:"
+        "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
+        }
     }
     "Deployable"
     {
@@ -319,7 +351,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP2Geoloc"
         "ProductCode" = "8:{9DE374FA-2BBA-4BB2-921A-BB2847A36191}"
-        "PackageCode" = "8:{50CA38CD-F483-4549-99F5-2E5AD781E13E}"
+        "PackageCode" = "8:{3E3A8A96-41FC-4A98-9FAA-072B06C326DF}"
         "UpgradeCode" = "8:{4D6D8381-E2D0-49F4-9350-9B4C33891F87}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -854,7 +886,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
             {
-            "SourcePath" = "8:..\\PathManagerCustomAction\\obj\\Release\\PathManagerCustomAction.exe"
+            "SourcePath" = "8:..\\PathManagerCustomAction\\obj\\Unit Testing\\PathManagerCustomAction.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"
@@ -882,7 +914,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B8468C5121A7484CA593AEFD509FA19F"
             {
-            "SourcePath" = "8:..\\Release\\IP2Geoloc.exe"
+            "SourcePath" = "8:..\\Unit Testing\\IP2Geoloc.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"

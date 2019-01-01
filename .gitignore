@@ -38,3 +38,6 @@ PathManagerCustomAction/bin/
 PathManagerCustomAction/obj/
 IP2Geoloc/Release/
 Release/
+IP2Geoloc/Unit Testing/IP2Geoloc.idb
+Tool-Tests/Unit Testing/vc141.idb
+Installer Project/Unit Testing/Installer Project.tmp

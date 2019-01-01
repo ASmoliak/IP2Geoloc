@@ -42,7 +42,6 @@ Settings ProgramArgumentsParser::getParsedSettings()
 	return generated_settings;
 }
 
-
 void ProgramArgumentsParser::printHelp()
 {
 	std::cout << _program_options << std::endl;

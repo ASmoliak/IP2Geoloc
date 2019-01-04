@@ -30,9 +30,9 @@ struct Geolocation
 	bool operator==(const Geolocation &other)
 	{
 		bool equals = true;
-		equals &= _country != other._country;
-		equals &= _region_name != other._region_name;
-		equals &= _city != other._city;
+		equals &= _country == other._country;
+		equals &= _region_name == other._region_name;
+		equals &= _city == other._city;
 		return equals;
 	}
 };

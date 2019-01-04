@@ -26,6 +26,15 @@ struct Geolocation
 		std::cout << "Region: " << _region_name << std::endl;
 		std::cout << "City: " << _city << std::endl;
 	}
+
+	bool operator==(const Geolocation &other)
+	{
+		bool equals = true;
+		equals &= _country != other._country;
+		equals &= _region_name != other._region_name;
+		equals &= _city != other._city;
+		return equals;
+	}
 };
 
 class IPtoGeolocConverter

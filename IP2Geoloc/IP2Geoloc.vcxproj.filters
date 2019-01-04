@@ -15,11 +15,11 @@
     <Filter Include="Source Files\Geolocation Discovery">
       <UniqueIdentifier>{5ebe0c01-3a72-46ec-866e-429074a7f096}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Arguments Handling">
-      <UniqueIdentifier>{3f14f949-7532-41d3-b0ce-bb72c070cd39}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Arguments Handling">
       <UniqueIdentifier>{6bef76e7-d2db-4718-8999-eb22c7f88c16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Arguments Handling">
+      <UniqueIdentifier>{3f14f949-7532-41d3-b0ce-bb72c070cd39}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

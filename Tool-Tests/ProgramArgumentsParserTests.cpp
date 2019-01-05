@@ -1,38 +1,9 @@
 #include "pch.h"
+#include "../IP2Geoloc/ProgramArgumentsParser.h"
 
 int _valid_argument_count = 3;
 char *_valid_target_IP = "8.8.8.8";
 char *_valid_arguments[] = { "C:\\Users\\Luka\\source\\repos\\IP2Geoloc Tool\\Unit Testing\\IP2Geoloc.exe", "--ip", _valid_target_IP };
-
-struct ProgramArgumentsParserData
-{
-	ProgramArgumentsParserData(int argc, const std::string ipv4, const std::vector<std::string> argv, bool expect_to_succeed) :
-		_argument_count(argc), _target_IP(ipv4), _arguments(argv), _expect_to_succeed(expect_to_succeed)
-	{
-	}
-
-	int _argument_count;
-	const std::string _target_IP;
-	const std::vector<std::string> _arguments;
-	bool _expect_to_succeed;
-};
-
-struct ProgramArgumentsParserDataTest : public testing::Test
-{
-	ProgramArgumentsParserData *test_data;
-	void SetUp()
-	{
-		std::string target_IP = "8.8.8.8";
-		std::vector<std::string> argv = { "C:\\Users\\Luka\\source\\repos\\IP2Geoloc Tool\\Unit Testing\\IP2Geoloc.exe",
-			"--ip", target_IP };
-		test_data = new ProgramArgumentsParserData(3, "8.8.8.8", argv, true);
-	}
-
-	void TearDown()
-	{
-		delete test_data;
-	}
-};
 
 TEST(ProgramArgumentsParser_Tests, IPv4_Result_Validity)
 {

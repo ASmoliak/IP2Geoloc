@@ -50,12 +50,3 @@ TEST(ProgramArgumentsParser_Tests, Bad_Argument_Count)
 	ProgramArgumentsParser *parser = nullptr;
 	EXPECT_ANY_THROW(parser = new ProgramArgumentsParser(invalid_argument_count, _valid_arguments)) << "Our code did not throw an exception on invalid argument count";
 }
-
-TEST(ProgramArgumentsParser_Tests, Invalid_IPv4_address)
-{
-	char *invalid_target_IP = "8.8.88";
-	char *invalid_arguments[] = { "C:\\Users\\Luka\\source\\repos\\IP2Geoloc Tool\\Unit Testing\\IP2Geoloc.exe", "--ip", invalid_target_IP };
-	
-	ProgramArgumentsParser *parser = nullptr;
-	EXPECT_ANY_THROW(parser = new ProgramArgumentsParser(_valid_argument_count, invalid_arguments)) << "Our code did not throw an exception on invalid IPv4 address";
-}

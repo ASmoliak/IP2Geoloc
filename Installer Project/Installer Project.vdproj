@@ -33,12 +33,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9EC2C5D15A604C51988CF5CD3026323C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B8468C5121A7484CA593AEFD509FA19F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -173,7 +167,7 @@
             "InstallAction" = "3:1"
             "Arguments" = "8:--install-path \"[ProgramFilesFolder][Manufacturer]\\[ProductName]\""
             "EntryPoint" = "8:"
-            "Sequence" = "3:2"
+            "Sequence" = "3:1"
             "Identifier" = "8:_D6E5F70F_F02A_417C_A45E_B696E0E20931"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
@@ -189,20 +183,6 @@
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
             "Identifier" = "8:_5DF5013A_5248_4A95_B9BD_D8CB68EDC75E"
-            "InstallerClass" = "11:FALSE"
-            "CustomActionData" = "8:"
-            }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_D06111A505614A009005CC1BD4E9BEA4"
-            {
-            "Name" = "8:NDP461-KB3102436-x86-x64-AllOS-ENU.exe"
-            "Condition" = "8:"
-            "Object" = "8:_9EC2C5D15A604C51988CF5CD3026323C"
-            "FileType" = "3:2"
-            "InstallAction" = "3:1"
-            "Arguments" = "8:/Install"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_F94F195D_D07B_4028_8344_0BE25E49331B"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -274,26 +254,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9EC2C5D15A604C51988CF5CD3026323C"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\NDP461-KB3102436-x86-x64-AllOS-ENU.exe"
-            "TargetName" = "8:NDP461-KB3102436-x86-x64-AllOS-ENU.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_9085B42B43A9488184C1337490A3B085"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
         }
         "FileType"
         {
@@ -351,7 +311,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP2Geoloc"
         "ProductCode" = "8:{9DE374FA-2BBA-4BB2-921A-BB2847A36191}"
-        "PackageCode" = "8:{3E3A8A96-41FC-4A98-9FAA-072B06C326DF}"
+        "PackageCode" = "8:{76F4E0F0-7529-4A74-A4B7-4E37F62157F2}"
         "UpgradeCode" = "8:{4D6D8381-E2D0-49F4-9350-9B4C33891F87}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -886,7 +846,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
             {
-            "SourcePath" = "8:..\\PathManagerCustomAction\\obj\\Unit Testing\\PathManagerCustomAction.exe"
+            "SourcePath" = "8:..\\PathManagerCustomAction\\obj\\Release\\PathManagerCustomAction.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"
@@ -914,7 +874,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B8468C5121A7484CA593AEFD509FA19F"
             {
-            "SourcePath" = "8:..\\Unit Testing\\IP2Geoloc.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"

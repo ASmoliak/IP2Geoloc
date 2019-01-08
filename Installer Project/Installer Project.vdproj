@@ -57,7 +57,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Installer Project.msi"
+        "OutputFilename" = "8:Debug\\ip2geoloc_installer.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -80,6 +80,11 @@
                     {
                     "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Visual.C++.14.0.x86"
+                    {
+                    "Name" = "8:Visual C++ \"14\" Runtime Libraries (x86)"
+                    "ProductCode" = "8:Microsoft.Visual.C++.14.0.x86"
                     }
                 }
             }
@@ -126,7 +131,7 @@
         "DisplayName" = "8:Unit Testing"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Unit Testing\\Installer Project.msi"
+        "OutputFilename" = "8:Unit Testing\\ip2geoloc_installer.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -311,7 +316,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP2Geoloc"
         "ProductCode" = "8:{9DE374FA-2BBA-4BB2-921A-BB2847A36191}"
-        "PackageCode" = "8:{76F4E0F0-7529-4A74-A4B7-4E37F62157F2}"
+        "PackageCode" = "8:{4D9FF8DF-D99D-429A-98AD-6304C012EE93}"
         "UpgradeCode" = "8:{4D6D8381-E2D0-49F4-9350-9B4C33891F87}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -846,7 +851,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
             {
-            "SourcePath" = "8:..\\PathManagerCustomAction\\obj\\Release\\PathManagerCustomAction.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"
@@ -874,7 +879,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B8468C5121A7484CA593AEFD509FA19F"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\Release\\IP2Geoloc.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"

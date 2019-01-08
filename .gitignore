@@ -430,3 +430,5 @@ googlemock/gtest
 *.exe
 *.out
 *.app
+*.tlog
+*.idb

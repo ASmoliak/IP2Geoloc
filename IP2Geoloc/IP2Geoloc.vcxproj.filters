@@ -26,9 +26,6 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeolocParser.h">
-      <Filter>Header Files\Geolocation Discovery</Filter>
-    </ClInclude>
     <ClInclude Include="GeolocRequestor.h">
       <Filter>Header Files\Geolocation Discovery</Filter>
     </ClInclude>
@@ -37,6 +34,9 @@
     </ClInclude>
     <ClInclude Include="ProgramArgumentsParser.h">
       <Filter>Header Files\Arguments Handling</Filter>
+    </ClInclude>
+    <ClInclude Include="GeolocResponseAdapter.h">
+      <Filter>Header Files\Geolocation Discovery</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -49,14 +49,14 @@
     <ClCompile Include="GeolocRequestor.cpp">
       <Filter>Source Files\Geolocation Discovery</Filter>
     </ClCompile>
-    <ClCompile Include="GeolocParser.cpp">
-      <Filter>Source Files\Geolocation Discovery</Filter>
-    </ClCompile>
     <ClCompile Include="IPToGeolocConverter.cpp">
       <Filter>Source Files\Geolocation Discovery</Filter>
     </ClCompile>
     <ClCompile Include="ProgramArgumentsParser.cpp">
       <Filter>Source Files\Arguments Handling</Filter>
+    </ClCompile>
+    <ClCompile Include="GeolocResponseAdapter.cpp">
+      <Filter>Source Files\Geolocation Discovery</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

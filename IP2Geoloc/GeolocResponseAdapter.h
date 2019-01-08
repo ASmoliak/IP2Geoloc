@@ -6,12 +6,12 @@
 
 namespace property_tree = boost::property_tree;
 
-class GeolocParser
+class GeolocResponseAdapter
 {
 public:
 	// C'tor and D'tor
-	GeolocParser(std::stringstream &json_content);
-	GeolocParser(const std::string &json_file_name);
+	GeolocResponseAdapter(std::stringstream &json_content);
+	GeolocResponseAdapter(const std::string &json_file_name);
 
 	// Public member functions
 	std::string getCountry();

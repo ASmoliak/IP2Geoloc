@@ -232,7 +232,7 @@
   <ItemGroup>
     <ClInclude Include="IPtoGeolocConverter.h" />
     <ClInclude Include="GeolocRequestor.h" />
-    <ClInclude Include="GeolocParser.h" />
+    <ClInclude Include="GeolocResponseAdapter.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ProgramArgumentsParser.h" />
   </ItemGroup>
@@ -240,7 +240,7 @@
     <ClCompile Include="IPToGeolocConverter.cpp" />
     <ClCompile Include="GeolocRequestor.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="GeolocParser.cpp" />
+    <ClCompile Include="GeolocResponseAdapter.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unit Testing|Win32'">Create</PrecompiledHeader>

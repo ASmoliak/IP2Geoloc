@@ -7,11 +7,6 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer Project", "Instal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathManagerCustomAction", "PathManagerCustomAction\PathManagerCustomAction.csproj", "{07E77F4A-A37F-4DE3-A484-24C06DCEB9C6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A30F5582-DF40-4F92-A084-2AA9C540BFD0}"
-	ProjectSection(SolutionItems) = preProject
-		SolutionTodos.txt = SolutionTodos.txt
-	EndProjectSection
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IP2Geoloc", "IP2Geoloc\IP2Geoloc.vcxproj", "{35316D49-2EA9-43AC-9DEF-343EDD9BD175}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tool-Tests", "Tool-Tests\Tool-Tests.vcxproj", "{80D53BF5-6827-469D-B5FB-23E3EC78DF29}"

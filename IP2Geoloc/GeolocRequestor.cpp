@@ -3,7 +3,7 @@
 #include <string>
 
 #include "GeolocRequestor.h"
-#include "GeolocParser.h"
+#include "GeolocResponseAdapter.h"
 
 GeolocRequestor::GeolocRequestor() :
 	_ioc(), _socket(_ioc), _resolver(_ioc)

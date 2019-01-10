@@ -11,19 +11,15 @@ struct Settings
 class ProgramArgumentsParser
 {
 public:
-	// Constructor and destructor
 	ProgramArgumentsParser(int argument_count, char *arguments[]);
 
-	// Public member functions
 	Settings getParsedSettings();
 
 private:
-	// Private member functions
 	void generateOptions();
 	void storeArguments(int argument_count, char *arguments[]);
 	void printHelp();
 
-	// Private member variables
 	program_options::options_description _program_options = program_options::options_description("Allowed options");
 	program_options::variables_map _variables;
 };

@@ -13,7 +13,15 @@ void runGeolocationResolver()
 {
 	try
 	{
-		Geolocation result = IPtoGeolocConverter::convertIPtoGeoloc(_global_settings.IPv4_to_scan);
+		Geolocation result;
+		if (_global_settings.resolve_self)
+		{
+			result = IPtoGeolocConverter::convertIPtoGeoloc();
+		}
+		else
+		{
+			result = IPtoGeolocConverter::convertIPtoGeoloc(_global_settings.IPv4_to_scan);
+		}
 		result.printFields();
 	}
 	catch (const property_tree::file_parser_error &e)

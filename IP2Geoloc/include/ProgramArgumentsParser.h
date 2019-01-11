@@ -19,6 +19,8 @@ public:
 private:
 	void generateOptions();
 	void storeArguments(int argument_count, const char *arguments[]);
+	void validateArguments();
+	void searchForConflictingArguments();
 	void printHelp();
 
 	program_options::options_description _program_options = program_options::options_description("Allowed options");

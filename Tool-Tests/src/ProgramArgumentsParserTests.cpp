@@ -21,17 +21,17 @@ TEST(ProgramArgumentsParser_Tests, IPv4_Result_Validity)
 TEST(ProgramArgumentsParser_Tests, Bad_Argument_Count)
 {
 	const char *valid_resolve_arguments[] = { PROGARM_PATH, IP_ARGUMENT, VALID_TARGET_IP };
-	int valid_argument_count = 2;
+	int invalid_argument_count = 2;
 
 	ProgramArgumentsParser *parser = nullptr;
-	EXPECT_ANY_THROW(parser = new ProgramArgumentsParser(valid_argument_count, valid_resolve_arguments)) 
+	EXPECT_ANY_THROW(parser = new ProgramArgumentsParser(invalid_argument_count, valid_resolve_arguments))
 		<< "Our code did not throw an exception on invalid argument count";
 }
 
 TEST(ProgramArgumentsParser_Tests, Self_Result_Validity)
 {
 	const char *valid_resolve_arguments[] = { PROGARM_PATH, SELF_RESOLVE_ARGUMENT };
-	int valid_argument_count = 3;
+	int valid_argument_count = 2;
 
 	ProgramArgumentsParser parser(valid_argument_count, valid_resolve_arguments);
 	Settings result = parser.getParsedSettings();

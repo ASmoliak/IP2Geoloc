@@ -12,6 +12,10 @@ struct Geolocation
 	std::string _region_name;
 	std::string _city;
 
+	Geolocation()
+	{
+	}
+
 	Geolocation(const std::string &country, const std::string &region_name, const std::string &city) :
 		_country(country), _region_name(region_name), _city(city)
 	{
@@ -37,5 +41,5 @@ struct Geolocation
 class IPtoGeolocConverter
 {
 public:
-	static Geolocation convertIPtoGeoloc(const std::string &IPv4);
+	static Geolocation convertIPtoGeoloc(const std::string &IPv4 = "");
 };

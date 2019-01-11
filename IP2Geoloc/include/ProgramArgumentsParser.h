@@ -6,6 +6,7 @@ namespace program_options = boost::program_options;
 struct Settings
 {
 	std::string IPv4_to_scan;
+	bool resolve_self;
 };
 
 class ProgramArgumentsParser

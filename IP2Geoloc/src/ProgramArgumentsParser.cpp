@@ -64,7 +64,7 @@ Settings ProgramArgumentsParser::getParsedSettings()
 {
 	Settings generated_settings;
 
-	if (!_variables.size() && _variables.count(OptionNames::HELP))
+	if (!_variables.size() || _variables.count(OptionNames::HELP))
 	{
 		printHelp();
 		exit(0);

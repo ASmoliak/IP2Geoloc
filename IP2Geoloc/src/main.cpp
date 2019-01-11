@@ -54,5 +54,9 @@ int main(int argc, char *argv[])
 	{
 		std::cout << e.what() << std::endl;
 	}
+	catch (const std::invalid_argument &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 	return 0;
 }

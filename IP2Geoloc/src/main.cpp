@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 {
 	try
 	{
-		ProgramArgumentsParser argument_parser(argc, argv);
+		ProgramArgumentsParser argument_parser(argc, (const char**)argv);
 		_global_settings = argument_parser.getParsedSettings();
 		runGeolocationResolver();
 	}

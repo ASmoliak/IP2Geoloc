@@ -5,7 +5,7 @@
 
 #include "ProgramArgumentsParser.h"
 
-ProgramArgumentsParser::ProgramArgumentsParser(int argument_count, char *arguments[])
+ProgramArgumentsParser::ProgramArgumentsParser(int argument_count, const char *arguments[])
 {
 	generateOptions();
 	storeArguments(argument_count, arguments);
@@ -19,7 +19,7 @@ void ProgramArgumentsParser::generateOptions()
 		;
 }
 
-void ProgramArgumentsParser::storeArguments(int argument_count, char *arguments[])
+void ProgramArgumentsParser::storeArguments(int argument_count, const char *arguments[])
 {
 	program_options::store(program_options::parse_command_line(argument_count, arguments, _program_options), _variables);
 	program_options::notify(_variables);

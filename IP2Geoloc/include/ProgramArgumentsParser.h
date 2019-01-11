@@ -11,13 +11,13 @@ struct Settings
 class ProgramArgumentsParser
 {
 public:
-	ProgramArgumentsParser(int argument_count, char *arguments[]);
+	ProgramArgumentsParser(int argument_count, const char *arguments[]);
 
 	Settings getParsedSettings();
 
 private:
 	void generateOptions();
-	void storeArguments(int argument_count, char *arguments[]);
+	void storeArguments(int argument_count, const char *arguments[]);
 	void printHelp();
 
 	program_options::options_description _program_options = program_options::options_description("Allowed options");

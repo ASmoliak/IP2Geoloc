@@ -5,6 +5,7 @@ constexpr auto VALID_TARGET_IP = "8.8.8.8";
 constexpr auto PROGARM_PATH = "C:\\Users\\Luka\\source\\repos\\IP2Geoloc Tool\\bin\\Unit Testing\\IP2Geoloc.exe";
 constexpr auto IP_ARGUMENT = "--ip";
 constexpr auto SELF_RESOLVE_ARGUMENT = "--self";
+constexpr auto HELP_ARGUMENT = "--help";
 
 TEST(ProgramArgumentsParser_Tests, IPv4_Result_Validity)
 {

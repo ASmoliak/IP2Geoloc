@@ -31,7 +31,7 @@ void IPtoGeolocConverter::validateIP(const std::string &IPv4_address)
 	auto raw_ipv4_address = boost::asio::ip::address::from_string(IPv4_address, error_code);
 	if (error_code)
 	{
-		throw std::invalid_argument(error_code.message());
+		throw std::invalid_argument("Input IPv4 address is invalid");
 	}
 
 	std::string raw_to_string_form = raw_ipv4_address.to_string();

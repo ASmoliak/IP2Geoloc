@@ -18,7 +18,7 @@ TEST(IPToGeolocConverterTests, Invalid_IPv4_Input)
 
 	for (const auto &invalid_IPv4_adress : invalid_IPv4_addresses)
 	{
-		EXPECT_ANY_THROW(IPtoGeolocConverter::resolveIPtoGeoloc(invalid_IPv4_adress)) <<
+		EXPECT_THROW(IPtoGeolocConverter::resolveIPtoGeoloc(invalid_IPv4_adress), std::invalid_argument) <<
 			"We did not throw an exception on an invalid IPv4 address when resolving";
 	}
 }

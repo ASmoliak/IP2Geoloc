@@ -36,9 +36,9 @@ void runGeolocationResolver()
 	{
 		std::cout << "<CRITICAL> ptree error: " << e.what() << std::endl;
 	}
-	catch (...)
+	catch (const std::invalid_argument &e)
 	{
-		std::cout << "<CRITICAL> Unknown exception." << std::endl;
+		std::cout << "<CRITICAL> " << e.what() << std::endl;
 	}
 }
 

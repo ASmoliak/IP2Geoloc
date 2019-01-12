@@ -41,5 +41,8 @@ struct Geolocation
 class IPtoGeolocConverter
 {
 public:
-	static Geolocation convertIPtoGeoloc(const std::string &IPv4 = "");
+	static Geolocation resolveIPtoGeoloc(const std::string &IPv4 = "");
+
+private:
+	static void validateIP(const std::string &IPv4_address);
 };

@@ -16,11 +16,11 @@ void runGeolocationResolver()
 		Geolocation result;
 		if (_global_settings.resolve_self)
 		{
-			result = IPtoGeolocConverter::convertIPtoGeoloc();
+			result = IPtoGeolocConverter::resolveIPtoGeoloc();
 		}
 		else
 		{
-			result = IPtoGeolocConverter::convertIPtoGeoloc(_global_settings.IPv4_to_scan);
+			result = IPtoGeolocConverter::resolveIPtoGeoloc(_global_settings.IPv4_to_scan);
 		}
 		result.printFields();
 	}

@@ -23,8 +23,7 @@ TEST(ProgramArgumentsParser_Tests, Bad_Argument_Count)
 	const char *valid_resolve_arguments[] = { PROGARM_PATH, IP_ARGUMENT, VALID_TARGET_IP };
 	int invalid_argument_count = 2;
 
-	ProgramArgumentsParser *parser = nullptr;
-	EXPECT_ANY_THROW(parser = new ProgramArgumentsParser(invalid_argument_count, valid_resolve_arguments))
+	EXPECT_ANY_THROW(ProgramArgumentsParser(invalid_argument_count, valid_resolve_arguments))
 		<< "Our code did not throw an exception on invalid argument count";
 }
 

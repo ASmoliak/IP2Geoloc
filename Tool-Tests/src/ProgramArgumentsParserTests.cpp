@@ -57,18 +57,18 @@ TEST(ProgramArgumentsParser_Tests, Conflicting_Option_Detection)
 	int four_arguments = 4;
 
 	std::string error_string = "The argument parser did not throw on conflicting arguments";
-	EXPECT_ANY_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments1)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments2)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments3)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments4)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments5)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments6)) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments1), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments2), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments3), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments4), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments5), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments6), std::invalid_argument) << error_string;
 
-	EXPECT_ANY_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments7)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments8)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments9)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments10)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments11)) << error_string;
-	EXPECT_ANY_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments12)) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments7), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments8), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments9), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments10), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments11), std::invalid_argument) << error_string;
+	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments12), std::invalid_argument) << error_string;
 }
 

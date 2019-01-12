@@ -14,51 +14,54 @@ namespace OptionNames
 
 ProgramArgumentsParser::ProgramArgumentsParser(int argument_count, const char *arguments[])
 {
+	throwOnConflictingArguments(argument_count, arguments);
 	generateOptions();
 	storeArguments(argument_count, arguments);
-	validateArguments();
+}
+
+void ProgramArgumentsParser::throwOnConflictingArguments(int argument_count, const char *arguments[])
+{
+	std::vector<std::string> conflicting_options_vector = { OptionNames::HELP, OptionNames::IP, OptionNames::SELF };
+	std::vector<std::string> arguments_vector(arguments, arguments + argument_count);
+
+	bool conflictingOptionFound = false;
+
+	for (auto const &conflicting_option : conflicting_options_vector)
+	{
+		for(auto const &argument : arguments_vector)
+		{
+			std::string full_option = "--" + conflicting_option;
+
+			if(0 == full_option.compare(argument))
+			{
+				if (conflictingOptionFound)
+				{
+					throw std::invalid_argument("Conflicting options in argument parsing");
+				}
+				else
+				{
+					conflictingOptionFound = true;
+				}
+			}
+		}
+	}
 }
 
 void ProgramArgumentsParser::generateOptions()
 {
 	_program_options.add_options()
 		(OptionNames::HELP, "Produce this help message")
-		(OptionNames::IP, program_options::value<std::string>(), "Set the IP to get geolocation information for")
 		(OptionNames::SELF, "Resolve self IP")
+		(OptionNames::IP, program_options::value<std::string>(), "Set the IP to get geolocation information for")
 		;
 }
 
 void ProgramArgumentsParser::storeArguments(int argument_count, const char *arguments[])
-{
+{	
 	program_options::store(program_options::parse_command_line(argument_count, arguments, _program_options), _variables);
 	program_options::notify(_variables);
 }
 
-void ProgramArgumentsParser::validateArguments()
-{
-	searchForConflictingArguments();
-}
-
-void ProgramArgumentsParser::searchForConflictingArguments()
-{
-	std::vector<std::string> conflicting_options = { OptionNames::HELP, OptionNames::IP, OptionNames::SELF };
-	bool conflictingOptionFound = false;
-
-	for (auto const &option : conflicting_options)
-	{
-		if (_variables.count(option.c_str()))
-		{
-			if (conflictingOptionFound)
-			{
-				throw std::invalid_argument("Conflicting options in argument parsing");
-			}
-			else
-			{
-				conflictingOptionFound = true;
-			}
-		}
-	}
-}
 
 Settings ProgramArgumentsParser::getParsedSettings()
 {

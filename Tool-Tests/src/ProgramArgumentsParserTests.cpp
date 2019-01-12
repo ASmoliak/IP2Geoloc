@@ -41,6 +41,8 @@ TEST(ProgramArgumentsParser_Tests, Self_Result_Validity)
 
 TEST(ProgramArgumentsParser_Tests, Conflicting_Option_Detection)
 {
+	std::string error_string = "The argument parser did not throw on conflicting arguments";
+	
 	const char *conflicting_arguments1[] = { PROGARM_PATH, SELF_RESOLVE_ARGUMENT, IP_ARGUMENT };
 	const char *conflicting_arguments2[] = { PROGARM_PATH, SELF_RESOLVE_ARGUMENT, HELP_ARGUMENT };
 	const char *conflicting_arguments3[] = { PROGARM_PATH, IP_ARGUMENT,  SELF_RESOLVE_ARGUMENT };
@@ -48,15 +50,6 @@ TEST(ProgramArgumentsParser_Tests, Conflicting_Option_Detection)
 	const char *conflicting_arguments5[] = { PROGARM_PATH, HELP_ARGUMENT, IP_ARGUMENT };
 	const char *conflicting_arguments6[] = { PROGARM_PATH, HELP_ARGUMENT, SELF_RESOLVE_ARGUMENT };
 	int three_arguments = 3;
-	const char *conflicting_arguments7[] = { PROGARM_PATH, HELP_ARGUMENT, SELF_RESOLVE_ARGUMENT, IP_ARGUMENT };
-	const char *conflicting_arguments8[] = { PROGARM_PATH, HELP_ARGUMENT, IP_ARGUMENT, SELF_RESOLVE_ARGUMENT };
-	const char *conflicting_arguments9[] = { PROGARM_PATH, IP_ARGUMENT, SELF_RESOLVE_ARGUMENT, HELP_ARGUMENT };
-	const char *conflicting_arguments10[] = { PROGARM_PATH, IP_ARGUMENT, HELP_ARGUMENT, SELF_RESOLVE_ARGUMENT };
-	const char *conflicting_arguments11[] = { PROGARM_PATH, SELF_RESOLVE_ARGUMENT, HELP_ARGUMENT, IP_ARGUMENT };
-	const char *conflicting_arguments12[] = { PROGARM_PATH, SELF_RESOLVE_ARGUMENT, IP_ARGUMENT, HELP_ARGUMENT };
-	int four_arguments = 4;
-
-	std::string error_string = "The argument parser did not throw on conflicting arguments";
 	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments1), std::invalid_argument) << error_string;
 	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments2), std::invalid_argument) << error_string;
 	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments3), std::invalid_argument) << error_string;
@@ -64,6 +57,13 @@ TEST(ProgramArgumentsParser_Tests, Conflicting_Option_Detection)
 	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments5), std::invalid_argument) << error_string;
 	EXPECT_THROW(ProgramArgumentsParser(three_arguments, conflicting_arguments6), std::invalid_argument) << error_string;
 
+	const char *conflicting_arguments7[] = { PROGARM_PATH, HELP_ARGUMENT, SELF_RESOLVE_ARGUMENT, IP_ARGUMENT };
+	const char *conflicting_arguments8[] = { PROGARM_PATH, HELP_ARGUMENT, IP_ARGUMENT, SELF_RESOLVE_ARGUMENT };
+	const char *conflicting_arguments9[] = { PROGARM_PATH, IP_ARGUMENT, SELF_RESOLVE_ARGUMENT, HELP_ARGUMENT };
+	const char *conflicting_arguments10[] = { PROGARM_PATH, IP_ARGUMENT, HELP_ARGUMENT, SELF_RESOLVE_ARGUMENT };
+	const char *conflicting_arguments11[] = { PROGARM_PATH, SELF_RESOLVE_ARGUMENT, HELP_ARGUMENT, IP_ARGUMENT };
+	const char *conflicting_arguments12[] = { PROGARM_PATH, SELF_RESOLVE_ARGUMENT, IP_ARGUMENT, HELP_ARGUMENT };
+	int four_arguments = 4;
 	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments7), std::invalid_argument) << error_string;
 	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments8), std::invalid_argument) << error_string;
 	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments9), std::invalid_argument) << error_string;
@@ -71,4 +71,3 @@ TEST(ProgramArgumentsParser_Tests, Conflicting_Option_Detection)
 	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments11), std::invalid_argument) << error_string;
 	EXPECT_THROW(ProgramArgumentsParser(four_arguments, conflicting_arguments12), std::invalid_argument) << error_string;
 }
-

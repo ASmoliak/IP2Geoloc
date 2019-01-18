@@ -260,8 +260,10 @@
     <ClInclude Include="include\IPtoGeolocConverter.h" />
     <ClInclude Include="include\pch.h" />
     <ClInclude Include="include\ProgramArgumentsParser.h" />
+    <ClInclude Include="IpApiRequestor.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="IpApiRequestor.cpp" />
     <ClCompile Include="src\GeolocRequestor.cpp" />
     <ClCompile Include="src\GeolocResponseAdapter.cpp" />
     <ClCompile Include="src\IPToGeolocConverter.cpp" />

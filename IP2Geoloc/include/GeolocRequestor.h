@@ -12,19 +12,20 @@ typedef http::response<http::dynamic_body> http_response;
 class GeolocRequestor
 {
 public:
-	GeolocRequestor();
+	GeolocRequestor(const std::string &providerHostName, const std::string &providerPort, int httpVersionToUse);
 	~GeolocRequestor();
 
 	std::string requestGeolocFromIP(const std::string &IPv4);
 
+protected:
+	virtual http_request generateGeolocRequest(const std::string &IPv4) = 0;
+
+	const std::string _providerHostName, _providerPort;
+	const int _httpVersionToUse;
+
 private:
-	http_request generateGeolocRequest(const std::string &IPv4);
 	void sendRequest(const http_request &geoloc_request);
 	http_response readResponse();
-
-	static constexpr const char *HOST = "www.ip-api.com";
-	static constexpr const char *PORT = "80";
-	static constexpr int HTTP_VERSION = 11;
 
 	asio::io_context _ioc;
 	asio::ip::tcp::resolver _resolver;

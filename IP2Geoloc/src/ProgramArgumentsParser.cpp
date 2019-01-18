@@ -28,11 +28,11 @@ void ProgramArgumentsParser::throwOnConflictingArguments(int argument_count, con
 
 	for (auto const &conflicting_option : conflicting_options_vector)
 	{
-		for(auto const &argument : arguments_vector)
+		for (auto const &argument : arguments_vector)
 		{
 			std::string full_option = "--" + conflicting_option;
 
-			if(0 == full_option.compare(argument))
+			if (0 == full_option.compare(argument))
 			{
 				if (conflictingOptionFound)
 				{
@@ -57,7 +57,7 @@ void ProgramArgumentsParser::generateOptions()
 }
 
 void ProgramArgumentsParser::storeArguments(int argument_count, const char *arguments[])
-{	
+{
 	program_options::store(program_options::parse_command_line(argument_count, arguments, _program_options), _variables);
 	program_options::notify(_variables);
 }

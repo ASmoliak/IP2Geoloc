@@ -5,7 +5,7 @@
 
 #include "IPtoGeolocConverter.h"
 #include "GeolocResponseAdapter.h"
-#include "GeolocRequestor.h"
+#include "../IpApiRequestor.h"
 
 Geolocation IPtoGeolocConverter::resolveIPtoGeoloc(const std::string &IPv4)
 {
@@ -15,7 +15,7 @@ Geolocation IPtoGeolocConverter::resolveIPtoGeoloc(const std::string &IPv4)
 	}
 
 	std::stringstream geoloc_in_json;
-	GeolocRequestor requestor;
+	IpApiRequestor requestor("www.ip-api.com", "80", 11);
 	geoloc_in_json << requestor.requestGeolocFromIP(IPv4);
 	GeolocResponseAdapter response_parser(geoloc_in_json);
 

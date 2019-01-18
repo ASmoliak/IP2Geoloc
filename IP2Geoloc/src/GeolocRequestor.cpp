@@ -5,8 +5,9 @@
 #include "GeolocRequestor.h"
 #include "GeolocResponseAdapter.h"
 
-GeolocRequestor::GeolocRequestor() :
-	_ioc(), _socket(_ioc), _resolver(_ioc)
+GeolocRequestor::GeolocRequestor(const std::string &providerHostName, const std::string &providerPort, int httpVersionToUse) :
+	_ioc(), _socket(_ioc), _resolver(_ioc), 
+	_providerHostName(providerHostName), _providerPort(providerPort), _httpVersionToUse(httpVersionToUse)
 {
 }
 
@@ -26,19 +27,9 @@ std::string GeolocRequestor::requestGeolocFromIP(const std::string &IPv4)
 	return response_body;
 }
 
-http_request GeolocRequestor::generateGeolocRequest(const std::string &IPv4)
-{
-	std::string target_url = "/json/" + IPv4;
-	http_request request{ http::verb::get, target_url, HTTP_VERSION };
-	request.set(http::field::host, HOST);
-	request.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
-
-	return request;
-}
-
 void GeolocRequestor::sendRequest(const http_request &geoloc_request)
 {
-	auto const results = _resolver.resolve(HOST, PORT);
+	auto const results = _resolver.resolve(_providerHostName, _providerPort);
 
 	asio::connect(_socket, results.begin(), results.end());
 	http::write(_socket, geoloc_request);

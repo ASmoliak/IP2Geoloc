@@ -21,6 +21,12 @@
     <Filter Include="Source Files\Arguments Handling">
       <UniqueIdentifier>{3f14f949-7532-41d3-b0ce-bb72c070cd39}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Geolocation Discovery\Providers">
+      <UniqueIdentifier>{fcb8163d-00d1-4fe6-858b-22589a8fa37a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Geolocation Discovery\Providers">
+      <UniqueIdentifier>{5ba8ccf2-6838-4e40-9209-9f6216a38aeb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GeolocRequestor.h">
@@ -37,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="include\pch.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IpApiRequestor.h">
+      <Filter>Header Files\Geolocation Discovery\Providers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +66,9 @@
     </ClCompile>
     <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IpApiRequestor.cpp">
+      <Filter>Source Files\Geolocation Discovery\Providers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

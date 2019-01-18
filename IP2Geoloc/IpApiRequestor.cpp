@@ -10,7 +10,7 @@ IpApiRequestor::IpApiRequestor(const std::string &providerHostName, const std::s
 http_request IpApiRequestor::generateGeolocRequest(const std::string &IPv4)
 {
 	std::string target_url = "/json/" + IPv4;
-	http_request request{ http::verb::get, target_url, _httpVersionToUse};
+	http_request request{ http::verb::get, target_url, _httpVersionToUse };
 	request.set(http::field::host, _providerHostName);
 	request.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
 

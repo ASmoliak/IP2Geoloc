@@ -2,8 +2,8 @@
 
 #include "IpApiRequestor.h"
 
-IpApiRequestor::IpApiRequestor(const std::string &providerHostName, const std::string &providerPort, int httpVersionToUse) :
-	GeolocRequestor(providerHostName, providerPort, httpVersionToUse)
+IpApiRequestor::IpApiRequestor() :
+	GeolocRequestor(PROVIDER_HOSTNAME, PROVIDER_PORT, PROVIDER_HTTP_VERSION)
 {
 }
 

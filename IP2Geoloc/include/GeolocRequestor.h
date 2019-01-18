@@ -15,7 +15,7 @@ public:
 	GeolocRequestor(const std::string &providerHostName, const std::string &providerPort, int httpVersionToUse);
 	~GeolocRequestor();
 
-	std::string requestGeolocFromIP(const std::string &IPv4);
+	std::string requestGeoloctionOfIPV4(const std::string &IPv4);
 
 protected:
 	virtual http_request generateGeolocRequest(const std::string &IPv4) = 0;

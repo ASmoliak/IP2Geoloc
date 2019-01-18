@@ -255,17 +255,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Geolocation.h" />
     <ClInclude Include="include\GeolocRequestor.h" />
-    <ClInclude Include="include\GeolocResponseAdapter.h" />
+    <ClInclude Include="include\GeolocJSONResponseAdapter.h" />
     <ClInclude Include="include\IPtoGeolocConverter.h" />
     <ClInclude Include="include\pch.h" />
     <ClInclude Include="include\ProgramArgumentsParser.h" />
+    <ClInclude Include="IpApiProvider.h" />
     <ClInclude Include="IpApiRequestor.h" />
+    <ClInclude Include="IpApiResponseAdapter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="IpApiProvider.cpp" />
     <ClCompile Include="IpApiRequestor.cpp" />
+    <ClCompile Include="IpApiResponseAdapter.cpp" />
     <ClCompile Include="src\GeolocRequestor.cpp" />
-    <ClCompile Include="src\GeolocResponseAdapter.cpp" />
+    <ClCompile Include="src\GeolocJSONResponseAdapter.cpp" />
     <ClCompile Include="src\IPToGeolocConverter.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\pch.cpp">

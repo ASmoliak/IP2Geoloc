@@ -27,14 +27,20 @@
     <Filter Include="Header Files\Geolocation Discovery\Providers">
       <UniqueIdentifier>{5ba8ccf2-6838-4e40-9209-9f6216a38aeb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Geolocation Discovery\Providers\IpApi">
+      <UniqueIdentifier>{88e29951-8251-4653-973c-ac8d2cd2c2b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Geolocation Discovery\Providers\IpApi">
+      <UniqueIdentifier>{3c3d363a-3f85-4b9f-a87e-821c4dbb3e63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Geolocation Discovery\Base Classes">
+      <UniqueIdentifier>{591a927b-a537-43b0-9086-0a7d30431c11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geolocation Discovery\Base Classes">
+      <UniqueIdentifier>{e7b20b20-dd3b-471b-886f-dfc422da57d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\GeolocRequestor.h">
-      <Filter>Header Files\Geolocation Discovery</Filter>
-    </ClInclude>
-    <ClInclude Include="include\GeolocResponseAdapter.h">
-      <Filter>Header Files\Geolocation Discovery</Filter>
-    </ClInclude>
     <ClInclude Include="include\IPtoGeolocConverter.h">
       <Filter>Header Files\Geolocation Discovery</Filter>
     </ClInclude>
@@ -45,16 +51,25 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IpApiRequestor.h">
-      <Filter>Header Files\Geolocation Discovery\Providers</Filter>
+      <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClInclude>
+    <ClInclude Include="IpApiProvider.h">
+      <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClInclude>
+    <ClInclude Include="IpApiResponseAdapter.h">
+      <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClInclude>
+    <ClInclude Include="Geolocation.h">
+      <Filter>Header Files\Geolocation Discovery</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GeolocJSONResponseAdapter.h">
+      <Filter>Header Files\Geolocation Discovery\Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GeolocRequestor.h">
+      <Filter>Header Files\Geolocation Discovery\Base Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GeolocRequestor.cpp">
-      <Filter>Source Files\Geolocation Discovery</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GeolocResponseAdapter.cpp">
-      <Filter>Source Files\Geolocation Discovery</Filter>
-    </ClCompile>
     <ClCompile Include="src\IPToGeolocConverter.cpp">
       <Filter>Source Files\Geolocation Discovery</Filter>
     </ClCompile>
@@ -67,8 +82,20 @@
     <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IpApiProvider.cpp">
+      <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClCompile>
     <ClCompile Include="IpApiRequestor.cpp">
-      <Filter>Source Files\Geolocation Discovery\Providers</Filter>
+      <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClCompile>
+    <ClCompile Include="IpApiResponseAdapter.cpp">
+      <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GeolocRequestor.cpp">
+      <Filter>Source Files\Geolocation Discovery\Base Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GeolocJSONResponseAdapter.cpp">
+      <Filter>Source Files\Geolocation Discovery\Base Classes</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

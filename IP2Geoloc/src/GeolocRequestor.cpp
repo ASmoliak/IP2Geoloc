@@ -3,7 +3,7 @@
 #include <string>
 
 #include "GeolocRequestor.h"
-#include "GeolocResponseAdapter.h"
+#include "GeolocJSONResponseAdapter.h"
 
 GeolocRequestor::GeolocRequestor(const std::string &providerHostName, const std::string &providerPort, int httpVersionToUse) :
 	_ioc(), _socket(_ioc), _resolver(_ioc), 
@@ -17,7 +17,7 @@ GeolocRequestor::~GeolocRequestor()
 	_socket.shutdown(asio::ip::tcp::socket::shutdown_both, error_code);
 }
 
-std::string GeolocRequestor::requestGeolocFromIP(const std::string &IPv4)
+std::string GeolocRequestor::requestGeoloctionOfIPV4(const std::string &IPv4)
 {
 	http_request resolve_request = generateGeolocRequest(IPv4);
 	sendRequest(resolve_request);

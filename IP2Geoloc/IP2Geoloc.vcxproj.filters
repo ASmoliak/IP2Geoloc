@@ -59,14 +59,14 @@
     <ClInclude Include="IpApiResponseAdapter.h">
       <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
     </ClInclude>
-    <ClInclude Include="Geolocation.h">
-      <Filter>Header Files\Geolocation Discovery</Filter>
-    </ClInclude>
     <ClInclude Include="include\GeolocJSONResponseAdapter.h">
       <Filter>Header Files\Geolocation Discovery\Base Classes</Filter>
     </ClInclude>
     <ClInclude Include="include\GeolocRequestor.h">
       <Filter>Header Files\Geolocation Discovery\Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Geolocation.h">
+      <Filter>Header Files\Geolocation Discovery</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,9 @@
 #pragma once
 #include "pch.h"
 
-#include <iostream>
 #include <string>
 
-#include "../Geolocation.h"
+#include "Geolocation.h"
 
 
 class IPtoGeolocConverter

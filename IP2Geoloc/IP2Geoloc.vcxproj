@@ -135,7 +135,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
-      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -160,7 +160,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
-      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -217,7 +217,7 @@
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <LanguageStandard>stdcpp14</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>

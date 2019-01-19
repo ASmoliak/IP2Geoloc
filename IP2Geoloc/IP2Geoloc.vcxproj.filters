@@ -50,15 +50,6 @@
     <ClInclude Include="include\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IpApiRequestor.h">
-      <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
-    </ClInclude>
-    <ClInclude Include="IpApiProvider.h">
-      <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
-    </ClInclude>
-    <ClInclude Include="IpApiResponseAdapter.h">
-      <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
-    </ClInclude>
     <ClInclude Include="include\GeolocJSONResponseAdapter.h">
       <Filter>Header Files\Geolocation Discovery\Base Classes</Filter>
     </ClInclude>
@@ -67,6 +58,15 @@
     </ClInclude>
     <ClInclude Include="Geolocation.h">
       <Filter>Header Files\Geolocation Discovery</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Providers\IpApi\IpApiProvider.h">
+      <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Providers\IpApi\IpApiRequestor.h">
+      <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Providers\IpApi\IpApiResponseAdapter.h">
+      <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -82,20 +82,20 @@
     <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IpApiProvider.cpp">
-      <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
-    </ClCompile>
-    <ClCompile Include="IpApiRequestor.cpp">
-      <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
-    </ClCompile>
-    <ClCompile Include="IpApiResponseAdapter.cpp">
-      <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
-    </ClCompile>
     <ClCompile Include="src\GeolocRequestor.cpp">
       <Filter>Source Files\Geolocation Discovery\Base Classes</Filter>
     </ClCompile>
     <ClCompile Include="src\GeolocJSONResponseAdapter.cpp">
       <Filter>Source Files\Geolocation Discovery\Base Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Providers\IpApi\IpApiProvider.cpp">
+      <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Providers\IpApi\IpApiRequestor.cpp">
+      <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Providers\IpApi\IpApiResponseAdapter.cpp">
+      <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

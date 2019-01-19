@@ -261,14 +261,11 @@
     <ClInclude Include="include\IPtoGeolocConverter.h" />
     <ClInclude Include="include\pch.h" />
     <ClInclude Include="include\ProgramArgumentsParser.h" />
-    <ClInclude Include="IpApiProvider.h" />
-    <ClInclude Include="IpApiRequestor.h" />
-    <ClInclude Include="IpApiResponseAdapter.h" />
+    <ClInclude Include="include\Providers\IpApi\IpApiProvider.h" />
+    <ClInclude Include="include\Providers\IpApi\IpApiRequestor.h" />
+    <ClInclude Include="include\Providers\IpApi\IpApiResponseAdapter.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IpApiProvider.cpp" />
-    <ClCompile Include="IpApiRequestor.cpp" />
-    <ClCompile Include="IpApiResponseAdapter.cpp" />
     <ClCompile Include="src\GeolocRequestor.cpp" />
     <ClCompile Include="src\GeolocJSONResponseAdapter.cpp" />
     <ClCompile Include="src\IPToGeolocConverter.cpp" />
@@ -279,6 +276,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\ProgramArgumentsParser.cpp" />
+    <ClCompile Include="src\Providers\IpApi\IpApiProvider.cpp" />
+    <ClCompile Include="src\Providers\IpApi\IpApiRequestor.cpp" />
+    <ClCompile Include="src\Providers\IpApi\IpApiResponseAdapter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -43,6 +43,9 @@
     <ClInclude Include="include\pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CSVResponseAdapterTests.cpp" />
+    <ClCompile Include="RequestorTests.cpp" />
+    <ClCompile Include="JSONResponseAdapterTests.cpp" />
     <ClCompile Include="src\IPToGeolocConverterTests.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -64,7 +67,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;C:\Users\Luka\source\repos\IP2Geoloc Tool\Tool-Tests\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\Tool-Tests\src;C:\Users\Luka\source\repos\IP2Geoloc Tool\Tool-Tests;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;C:\Users\Luka\source\repos\IP2Geoloc Tool\Tool-Tests\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\Tool-Tests\src;C:\Users\Luka\source\repos\IP2Geoloc Tool\Tool-Tests;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\Ip2c;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

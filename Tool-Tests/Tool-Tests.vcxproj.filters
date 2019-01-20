@@ -10,6 +10,12 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{a95a0930-b31a-4ff0-b21c-b591e0b1dae2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\General Tests">
+      <UniqueIdentifier>{13504180-c234-46ee-8a5c-26b40f95010a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend Tests">
+      <UniqueIdentifier>{fc499c03-5a96-458c-81e4-4b5ce4173e76}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\pch.h">
@@ -17,14 +23,23 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\IPToGeolocConverterTests.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\IPToGeolocConverterTests.cpp">
+      <Filter>Source Files\General Tests</Filter>
+    </ClCompile>
     <ClCompile Include="src\ProgramArgumentsParserTests.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\General Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestorTests.cpp">
+      <Filter>Source Files\Backend Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="JSONResponseAdapterTests.cpp">
+      <Filter>Source Files\Backend Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="CSVResponseAdapterTests.cpp">
+      <Filter>Source Files\Backend Tests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

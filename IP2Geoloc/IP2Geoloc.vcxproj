@@ -135,7 +135,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
-      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\Ip2c</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -160,7 +160,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
-      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\Ip2c</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -217,7 +217,7 @@
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <LanguageStandard>stdcpp14</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_68_0;%(AdditionalIncludeDirectories);C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\IpApi;C:\Users\Luka\source\repos\IP2Geoloc Tool\IP2Geoloc\include\Providers\Ip2c</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
@@ -256,16 +256,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Geolocation.h" />
+    <ClInclude Include="include\GeolocCSVResponseAdapter.h" />
     <ClInclude Include="include\GeolocRequestor.h" />
     <ClInclude Include="include\GeolocJSONResponseAdapter.h" />
     <ClInclude Include="include\IPtoGeolocConverter.h" />
     <ClInclude Include="include\pch.h" />
     <ClInclude Include="include\ProgramArgumentsParser.h" />
+    <ClInclude Include="include\Providers\Ip2c\Ip2cProvider.h" />
+    <ClInclude Include="include\Providers\Ip2c\Ip2cRequestor.h" />
+    <ClInclude Include="include\Providers\Ip2c\Ip2cResponseAdapter.h" />
     <ClInclude Include="include\Providers\IpApi\IpApiProvider.h" />
     <ClInclude Include="include\Providers\IpApi\IpApiRequestor.h" />
     <ClInclude Include="include\Providers\IpApi\IpApiResponseAdapter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GeolocCSVResponseAdapter.cpp" />
     <ClCompile Include="src\GeolocRequestor.cpp" />
     <ClCompile Include="src\GeolocJSONResponseAdapter.cpp" />
     <ClCompile Include="src\IPToGeolocConverter.cpp" />
@@ -276,6 +281,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\ProgramArgumentsParser.cpp" />
+    <ClCompile Include="src\Providers\Ip2c\Ip2cProvider.cpp" />
+    <ClCompile Include="src\Providers\Ip2c\Ip2cRequestor.cpp" />
+    <ClCompile Include="src\Providers\Ip2c\Ip2cResponseAdapter.cpp" />
     <ClCompile Include="src\Providers\IpApi\IpApiProvider.cpp" />
     <ClCompile Include="src\Providers\IpApi\IpApiRequestor.cpp" />
     <ClCompile Include="src\Providers\IpApi\IpApiResponseAdapter.cpp" />

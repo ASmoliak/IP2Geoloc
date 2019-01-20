@@ -1,5 +1,8 @@
 #include "pch.h"
-#include "../IP2Geoloc/include/ProgramArgumentsParser.h"
+
+#include <string>
+
+#include "ProgramArgumentsParser.h"
 
 constexpr auto VALID_TARGET_IP = "8.8.8.8";
 constexpr auto PROGARM_PATH = "C:\\Users\\Luka\\source\\repos\\IP2Geoloc Tool\\bin\\Unit Testing\\IP2Geoloc.exe";

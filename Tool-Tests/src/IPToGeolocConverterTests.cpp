@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "../IP2Geoloc/include/IPtoGeolocConverter.h"
+#include "IPtoGeolocConverter.h"
 
 TEST(IPToGeolocConverterTests, Valid_IPv4_Input)
 {

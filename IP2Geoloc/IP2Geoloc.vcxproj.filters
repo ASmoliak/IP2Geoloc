@@ -39,6 +39,12 @@
     <Filter Include="Source Files\Geolocation Discovery\Base Classes">
       <UniqueIdentifier>{e7b20b20-dd3b-471b-886f-dfc422da57d5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Geolocation Discovery\Providers\Ip2c">
+      <UniqueIdentifier>{8a9e1d4f-8515-4300-ace0-13e19dbf6c45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geolocation Discovery\Providers\Ip2c">
+      <UniqueIdentifier>{14eb0475-0b77-4075-a684-b5d32cd6464a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\IPtoGeolocConverter.h">
@@ -68,6 +74,18 @@
     <ClInclude Include="include\Providers\IpApi\IpApiResponseAdapter.h">
       <Filter>Header Files\Geolocation Discovery\Providers\IpApi</Filter>
     </ClInclude>
+    <ClInclude Include="include\Providers\Ip2c\Ip2cProvider.h">
+      <Filter>Header Files\Geolocation Discovery\Providers\Ip2c</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Providers\Ip2c\Ip2cRequestor.h">
+      <Filter>Header Files\Geolocation Discovery\Providers\Ip2c</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Providers\Ip2c\Ip2cResponseAdapter.h">
+      <Filter>Header Files\Geolocation Discovery\Providers\Ip2c</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GeolocCSVResponseAdapter.h">
+      <Filter>Header Files\Geolocation Discovery\Base Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\IPToGeolocConverter.cpp">
@@ -96,6 +114,18 @@
     </ClCompile>
     <ClCompile Include="src\Providers\IpApi\IpApiResponseAdapter.cpp">
       <Filter>Source Files\Geolocation Discovery\Providers\IpApi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Providers\Ip2c\Ip2cProvider.cpp">
+      <Filter>Source Files\Geolocation Discovery\Providers\Ip2c</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Providers\Ip2c\Ip2cRequestor.cpp">
+      <Filter>Source Files\Geolocation Discovery\Providers\Ip2c</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Providers\Ip2c\Ip2cResponseAdapter.cpp">
+      <Filter>Source Files\Geolocation Discovery\Providers\Ip2c</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GeolocCSVResponseAdapter.cpp">
+      <Filter>Source Files\Geolocation Discovery\Base Classes</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

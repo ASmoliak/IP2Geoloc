@@ -4,7 +4,6 @@
 #include <sstream>
 
 #include "IPtoGeolocConverter.h"
-#include "Geolocation.h"
 #include "IpApiProvider.h"
 
 Geolocation IPtoGeolocConverter::resolveIPtoGeoloc(const std::string &IPv4)

@@ -3,10 +3,11 @@
 
 #include "Ip2cRequestor.h"
 #include "Ip2cResponseAdapter.h"
-#include "Geolocation.h"
 
 // Geolocation Provider: www.ip-api.com
 // Format: CSV
+typedef Ip2cResponseAdapter Geolocation;
+
 class Ip2cProvider
 {
 public:

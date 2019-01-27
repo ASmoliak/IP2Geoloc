@@ -13,7 +13,15 @@ void runGeolocationResolver()
 {
 	try
 	{
-		Geolocation result = IPtoGeolocConverter::convertIPtoGeoloc(_global_settings.IPv4_to_scan);
+		Geolocation result;
+		if (_global_settings.resolve_self)
+		{
+			result = IPtoGeolocConverter::resolveIPtoGeoloc();
+		}
+		else
+		{
+			result = IPtoGeolocConverter::resolveIPtoGeoloc(_global_settings.IPv4_to_scan);
+		}
 		result.printFields();
 	}
 	catch (const property_tree::file_parser_error &e)
@@ -28,9 +36,9 @@ void runGeolocationResolver()
 	{
 		std::cout << "<CRITICAL> ptree error: " << e.what() << std::endl;
 	}
-	catch (...)
+	catch (const std::invalid_argument &e)
 	{
-		std::cout << "<CRITICAL> Unknown exception." << std::endl;
+		std::cout << "<CRITICAL> " << e.what() << std::endl;
 	}
 }
 
@@ -38,11 +46,15 @@ int main(int argc, char *argv[])
 {
 	try
 	{
-		ProgramArgumentsParser argument_parser(argc, argv);
+		ProgramArgumentsParser argument_parser(argc, (const char**)argv);
 		_global_settings = argument_parser.getParsedSettings();
 		runGeolocationResolver();
 	}
 	catch (const boost::program_options::error &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	catch (const std::invalid_argument &e)
 	{
 		std::cout << e.what() << std::endl;
 	}

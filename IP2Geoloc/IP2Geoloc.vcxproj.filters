@@ -23,40 +23,40 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeolocRequestor.h">
+    <ClInclude Include="include\GeolocRequestor.h">
       <Filter>Header Files\Geolocation Discovery</Filter>
     </ClInclude>
-    <ClInclude Include="IPtoGeolocConverter.h">
+    <ClInclude Include="include\GeolocResponseAdapter.h">
       <Filter>Header Files\Geolocation Discovery</Filter>
     </ClInclude>
-    <ClInclude Include="ProgramArgumentsParser.h">
+    <ClInclude Include="include\IPtoGeolocConverter.h">
+      <Filter>Header Files\Geolocation Discovery</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ProgramArgumentsParser.h">
       <Filter>Header Files\Arguments Handling</Filter>
     </ClInclude>
-    <ClInclude Include="GeolocResponseAdapter.h">
-      <Filter>Header Files\Geolocation Discovery</Filter>
+    <ClInclude Include="include\pch.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeolocRequestor.cpp">
+    <ClCompile Include="src\GeolocRequestor.cpp">
       <Filter>Source Files\Geolocation Discovery</Filter>
     </ClCompile>
-    <ClCompile Include="IPToGeolocConverter.cpp">
+    <ClCompile Include="src\GeolocResponseAdapter.cpp">
       <Filter>Source Files\Geolocation Discovery</Filter>
     </ClCompile>
-    <ClCompile Include="ProgramArgumentsParser.cpp">
+    <ClCompile Include="src\IPToGeolocConverter.cpp">
+      <Filter>Source Files\Geolocation Discovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProgramArgumentsParser.cpp">
       <Filter>Source Files\Arguments Handling</Filter>
     </ClCompile>
-    <ClCompile Include="GeolocResponseAdapter.cpp">
-      <Filter>Source Files\Geolocation Discovery</Filter>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

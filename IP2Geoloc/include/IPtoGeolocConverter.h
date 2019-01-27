@@ -8,18 +8,19 @@
 
 struct Geolocation
 {
-	// Member variables
 	std::string _country;
 	std::string _region_name;
 	std::string _city;
 
-	// C'tor
+	Geolocation()
+	{
+	}
+
 	Geolocation(const std::string &country, const std::string &region_name, const std::string &city) :
 		_country(country), _region_name(region_name), _city(city)
 	{
 	}
 
-	// Public member functions
 	void printFields()
 	{
 		std::cout << "Country: " << _country << std::endl;
@@ -40,6 +41,8 @@ struct Geolocation
 class IPtoGeolocConverter
 {
 public:
-	// Public member functions
-	static Geolocation convertIPtoGeoloc(const std::string &IPv4);
+	static Geolocation resolveIPtoGeoloc(const std::string &IPv4 = "");
+
+private:
+	static void validateIP(const std::string &IPv4_address);
 };

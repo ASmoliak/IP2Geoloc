@@ -1,62 +1,38 @@
-#include "pch.h"
-
 #include <iostream>
 
-#include "ProgramArgumentsParser.h"
-#include "IPtoGeolocConverter.h"
+#include "ArgumentParser.hpp"
+#include "IP2Geoloc.hpp"
 
 Settings _global_settings;
 
-namespace property_tree = boost::property_tree;
-
 void runGeolocationResolver()
 {
-	try
+	IP2Geoloc ip2geoloc;
+	IP2Geoloc::Geolocation result;
+	if (_global_settings.resolve_self)
 	{
-		Geolocation result;
-		if (_global_settings.resolve_self)
-		{
-			result = IPtoGeolocConverter::resolveIPtoGeoloc();
-		}
-		else
-		{
-			result = IPtoGeolocConverter::resolveIPtoGeoloc(_global_settings.IPv4_to_scan);
-		}
-		result.printFields();
+		result = ip2geoloc.resolve();
 	}
-	catch (const property_tree::file_parser_error &e)
+	else
 	{
-		std::cout << "<CRITICAL> " << e.what() << std::endl;
+		result = ip2geoloc.resolve(_global_settings.IPv4_to_scan);
 	}
-	catch (const property_tree::ptree_bad_path &e)
-	{
-		std::cout << "<CRITICAL> " << e.what() << std::endl;
-	}
-	catch (const property_tree::ptree_error &e)
-	{
-		std::cout << "<CRITICAL> ptree error: " << e.what() << std::endl;
-	}
-	catch (const std::invalid_argument &e)
-	{
-		std::cout << "<CRITICAL> " << e.what() << std::endl;
-	}
+
+	result.print();
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
 	try
 	{
-		ProgramArgumentsParser argument_parser(argc, (const char**)argv);
+		ArgumentParser argument_parser(argc, (const char**)argv);
 		_global_settings = argument_parser.getParsedSettings();
 		runGeolocationResolver();
 	}
-	catch (const boost::program_options::error &e)
+	catch (const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << "<CRITICAL> " << e.what() << std::endl;
 	}
-	catch (const std::invalid_argument &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+
 	return 0;
 }

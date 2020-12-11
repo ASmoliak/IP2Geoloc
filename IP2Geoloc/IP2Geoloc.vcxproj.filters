@@ -5,57 +5,26 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Header Files\Geolocation Discovery">
-      <UniqueIdentifier>{5c731195-da5e-445e-8b33-e9dbb58fdd47}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Geolocation Discovery">
       <UniqueIdentifier>{5ebe0c01-3a72-46ec-866e-429074a7f096}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Arguments Handling">
-      <UniqueIdentifier>{6bef76e7-d2db-4718-8999-eb22c7f88c16}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Arguments Handling">
       <UniqueIdentifier>{3f14f949-7532-41d3-b0ce-bb72c070cd39}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\GeolocRequestor.h">
-      <Filter>Header Files\Geolocation Discovery</Filter>
+    <ClInclude Include="include\GeolocRequestor.hpp">
+      <Filter>Source Files\Geolocation Discovery</Filter>
     </ClInclude>
-    <ClInclude Include="include\GeolocResponseAdapter.h">
-      <Filter>Header Files\Geolocation Discovery</Filter>
+    <ClInclude Include="include\IP2Geoloc.hpp">
+      <Filter>Source Files\Geolocation Discovery</Filter>
     </ClInclude>
-    <ClInclude Include="include\IPtoGeolocConverter.h">
-      <Filter>Header Files\Geolocation Discovery</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ProgramArgumentsParser.h">
-      <Filter>Header Files\Arguments Handling</Filter>
-    </ClInclude>
-    <ClInclude Include="include\pch.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\ArgumentParser.hpp">
+      <Filter>Source Files\Arguments Handling</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GeolocRequestor.cpp">
-      <Filter>Source Files\Geolocation Discovery</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GeolocResponseAdapter.cpp">
-      <Filter>Source Files\Geolocation Discovery</Filter>
-    </ClCompile>
-    <ClCompile Include="src\IPToGeolocConverter.cpp">
-      <Filter>Source Files\Geolocation Discovery</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ProgramArgumentsParser.cpp">
-      <Filter>Source Files\Arguments Handling</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

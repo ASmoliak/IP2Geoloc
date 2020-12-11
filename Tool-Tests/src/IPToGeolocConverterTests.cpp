@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "../IP2Geoloc/include/IPtoGeolocConverter.h"
 
-TEST(IPToGeolocConverterTests, Valid_IPv4_Input)
+TEST(IP2GeolocTests, Valid_IPv4_Input)
 {
 	std::string valid_IPv4_address = "8.8.8.8";
 	Geolocation expected_result("United States", "California", "Mountain View");
@@ -12,7 +12,7 @@ TEST(IPToGeolocConverterTests, Valid_IPv4_Input)
 	EXPECT_TRUE(areResultsValid) << "The resolved Geolocation info is not the same as the expected Geolocation";
 }
 
-TEST(IPToGeolocConverterTests, Invalid_IPv4_Input)
+TEST(IP2GeolocTests, Invalid_IPv4_Input)
 {
 	std::vector<std::string> invalid_IPv4_addresses = { "I am an address!", "8.8.88", "1111", "4124asdf", "Dafsdr2345@#$", "0x1.0x2.0x3" };
 

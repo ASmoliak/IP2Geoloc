@@ -1,11 +1,11 @@
-#include "pch.h"
-#include "../IP2Geoloc/include/ProgramArgumentsParser.h"
+#include <string>
+#include "../IP2Geoloc/include/ArgumentParser.hpp"
 
-constexpr auto VALID_TARGET_IP = "8.8.8.8";
-constexpr auto PROGARM_PATH = "C:\\Users\\Luka\\source\\repos\\IP2Geoloc Tool\\bin\\Unit Testing\\IP2Geoloc.exe";
-constexpr auto IP_ARGUMENT = "--ip";
-constexpr auto SELF_RESOLVE_ARGUMENT = "--self";
-constexpr auto HELP_ARGUMENT = "--help";
+static constexpr auto VALID_TARGET_IP = "8.8.8.8";
+static constexpr auto PROGARM_PATH = "C:\\Users\\Luka\\source\\repos\\IP2Geoloc Tool\\bin\\Unit Testing\\IP2Geoloc.exe";
+static constexpr auto IP_ARGUMENT = "--ip";
+static constexpr auto SELF_RESOLVE_ARGUMENT = "--self";
+static constexpr auto HELP_ARGUMENT = "--help";
 
 TEST(ProgramArgumentsParser_Tests, IPv4_Result_Validity)
 {
@@ -42,7 +42,7 @@ TEST(ProgramArgumentsParser_Tests, Self_Result_Validity)
 TEST(ProgramArgumentsParser_Tests, Conflicting_Option_Detection)
 {
 	std::string error_string = "The argument parser did not throw on conflicting arguments";
-	
+
 	const char *conflicting_arguments1[] = { PROGARM_PATH, SELF_RESOLVE_ARGUMENT, IP_ARGUMENT };
 	const char *conflicting_arguments2[] = { PROGARM_PATH, SELF_RESOLVE_ARGUMENT, HELP_ARGUMENT };
 	const char *conflicting_arguments3[] = { PROGARM_PATH, IP_ARGUMENT,  SELF_RESOLVE_ARGUMENT };

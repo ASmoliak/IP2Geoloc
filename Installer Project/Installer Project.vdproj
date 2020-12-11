@@ -21,32 +21,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7D6E15C8547A2BE73353E2C50532F00F"
-        "OwnerKey" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9D9BDE92E4DA40F2824D47607447157A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B8468C5121A7484CA593AEFD509FA19F"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3CB9F59C6D1A45E2AB276D3ECE52CFFD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7D6E15C8547A2BE73353E2C50532F00F"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -151,7 +127,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.6.1"
+                "FrameworkVersion" = "8:v4.6.1"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=671728"
                 }
@@ -159,37 +135,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7D6E15C8547A2BE73353E2C50532F00F"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_7D6E15C8547A2BE73353E2C50532F00F"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Net.Http.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_9085B42B43A9488184C1337490A3B085"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
         }
         "FileType"
         {
@@ -763,20 +708,6 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_9D9BDE92E4DA40F2824D47607447157A"
-            {
-            "UseDynamicProperties" = "11:TRUE"
-            "IsDependency" = "11:FALSE"
-            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Redist\\MSVC\\14.16.27012\\MergeModules\\Microsoft_VC141_CRT_x86.msm"
-                "Properties"
-                {
-                }
-            "LanguageId" = "3:0"
-            "Exclude" = "11:FALSE"
-            "Folder" = "8:"
-            "Feature" = "8:"
-            "IsolateTo" = "8:"
-            }
         }
         "ProjectOutput"
         {
@@ -810,7 +741,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B8468C5121A7484CA593AEFD509FA19F"
             {
-            "SourcePath" = "8:..\\bin\\Release\\IP2Geoloc.exe"
+            "SourcePath" = "8:..\\x64\\Release\\IP2Geoloc.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9085B42B43A9488184C1337490A3B085"

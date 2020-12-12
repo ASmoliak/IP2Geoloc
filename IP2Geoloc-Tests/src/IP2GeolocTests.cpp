@@ -16,7 +16,9 @@ TEST(IP2GeolocTests, ValidAddressesWork)
 
 TEST(IP2GeolocTests, InvalidAddressesThrow)
 {
-	std::vector<std::string> invalid_IPv4_addresses = { "I am an address!", "8.8.88", "1111", "4124asdf", "Dafsdr2345@#$", "0x1.0x2.0x3" };
+	std::vector<std::string> invalid_IPv4_addresses = {"I am an address!", "8.8.88", 
+														"1111", "4124asdf"
+														"Dafsdr2345@#$", "0x1.0x2.0x3" };
 
 	IP2Geoloc ip2geoloc;
 	for (const auto &invalid_IPv4_adress : invalid_IPv4_addresses)

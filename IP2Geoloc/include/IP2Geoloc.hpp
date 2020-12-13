@@ -42,7 +42,7 @@ public:
 
 	Geolocation resolve(const std::string& IPv4 = "")
 	{
-		if (!isValidIPv4(IPv4))
+		if (!IPv4.empty() && !isValidIPv4(IPv4))
 		{
 			throw std::invalid_argument("Input IPv4 address is invalid");
 		}

@@ -1,8 +1,17 @@
 #pragma once
 #include <string>
 
-#include <boost/asio.hpp>
-#include <boost/beast.hpp>
+#include <boost/asio/io_context.hpp>
+#include <boost/asio/connect.hpp>
+#include <boost/asio/ip/tcp.hpp>
+#include <boost/beast/version.hpp>
+#include <boost/beast/core/buffers_to_string.hpp>
+#include <boost/beast/core/flat_buffer.hpp>
+#include <boost/beast/http/string_body.hpp>
+#include <boost/beast/http/dynamic_body.hpp>
+#include <boost/beast/http/write.hpp>
+#include <boost/beast/http/read.hpp>
+
 #include <boost/noncopyable.hpp>
 
 class GeolocRequestor : boost::noncopyable
@@ -13,7 +22,6 @@ class GeolocRequestor : boost::noncopyable
 
 	typedef boost::beast::http::request<boost::beast::http::string_body> http_request;
 	typedef boost::beast::http::response<boost::beast::http::dynamic_body> http_response;
-
 
 	boost::asio::io_context _ioc;
 	boost::asio::ip::tcp::socket _socket;

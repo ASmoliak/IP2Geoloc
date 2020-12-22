@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 
+#include <boost/asio/ip/address_v4.hpp>
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 
@@ -63,7 +64,7 @@ private:
 	static bool isValidIPv4(const std::string& IPv4)
 	{
 		boost::system::error_code ec;
-		auto raw_ipv4_address = boost::asio::ip::address::from_string(IPv4, ec);
+		auto raw_ipv4_address = boost::asio::ip::address_v4::from_string(IPv4, ec);
 
 		return (!ec && raw_ipv4_address.to_string() == IPv4);
 	}

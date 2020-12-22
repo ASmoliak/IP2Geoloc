@@ -10,13 +10,13 @@ TEST(IP2GeolocTests, ValidAddressesWork)
 	IP2Geoloc ip2geoloc;
 	auto actual_result = ip2geoloc.resolve(valid_IPv4_address);
 
-	EXPECT_TRUE(actual_result == expected_result) << 
+	EXPECT_TRUE(actual_result == expected_result) <<
 				"The resolved Geolocation info is not the same as the expected Geolocation";
 }
 
 TEST(IP2GeolocTests, InvalidAddressesThrow)
 {
-	std::vector<std::string> invalid_IPv4_addresses = {"I am an address!", "8.8.88", 
+	std::vector<std::string> invalid_IPv4_addresses = {"I am an address!", "8.8.88",
 														"1111", "4124asdf"
 														"Dafsdr2345@#$", "0x1.0x2.0x3" };
 
